@@ -1,2 +1,0 @@
-key,filepath,filepathLowQuality,spriteNumber,centerX,centerY,headOffsetX,headOffsetY,standing,forward,backward,hurt,death,attCharge0,attSmear0,attAttack0,attCharge1,attSmear1,attAttack1,attCharge2,attSmear2,attAttack2,attCharge3,attSmear3,attAttack3
-anim_dreadwyrm_heir,mod_dreadwyrm.png,mod_dreadwyrm_lq.png,14,250,280,0,-180,0-1,2-3,4-5,6,6,7-8-9,10,11-12-13,7-8-9,10,11-12-13,7-8-9,10,11-12-13,7-8-9,10,11-12-13
