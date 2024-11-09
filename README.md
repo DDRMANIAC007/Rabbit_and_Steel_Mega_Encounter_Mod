@@ -14,10 +14,10 @@ More Bosses - Sunnie, the Radiant Dragon (Lunar) | Nyxa, the Midnight Trader (Lu
 
 # Where do the encounters appear?
 
-Dreadwyrm Heir - Red Darkhouse replacing BOSSNAME
+Dreadwyrm Heir - Red Darkhouse replacing Karsi, the Ruby Dragon
 
 Tassha, the Snowfur Wolf - King's Arsenal replacing the vanilla Tassha, the Snowfur Wolf
 
-Sunnie, the Radiant Dragon - Red Darkhouse replacing BOSSNAME
+Sunnie, the Radiant Dragon - Red Darkhouse replacing Illie, the Emerald Dragon
 
-Nyxa, the Midnight Trader - AREANAME replacing BOSSNAME
+Nyxa, the Midnight Trader - Churchmouse Streets replacing Meg, the Rosemage Mouse &amp; Varo, the Commander Mouse
