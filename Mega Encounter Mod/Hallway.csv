@@ -25,7 +25,7 @@ bossbattle,enc_wolf_steeltooth0
 ,
 hallway,hw_lighthouse
 shop,
-battle,enc_dragon_gold0;enc_dragon_gold1
+battle,enc_nyxa_midnight_trader
 battle,enc_sunnie_radiant_dragon
 battle,enc_dreadwyrm_heir
 loot,
@@ -35,7 +35,7 @@ hallway,hw_streets
 shop,
 battle,enc_mouse_archer0;enc_mouse_archer1
 battle,enc_mouse_oakspear0;enc_mouse_oakspear1
-battle,enc_nyxa_midnight_trader
+battle,enc_mouse_rosemage0
 loot,
 bossbattle,enc_mouse_paladin0
 ,
