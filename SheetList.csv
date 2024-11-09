@@ -1,2 +1,23 @@
 Sheet Type,filename
 HallwaySheet,Hallway
+,
+AnimationSheet,Dreadwyrm_Anim
+EnemySheet,Dreadwyrm_Enemy
+TitleSheet,Dreadwyrm_Title
+EncounterSheet,Dreadwyrm_Encounter
+PatternSheet,Dreadwyrm_Pattern
+PatternSheet,Dreadwyrm_Pattern_Singleplayer
+PatternSheet,Dreadwyrm_Pattern_Multiplayer
+,
+EncounterSheet,Tassha_Revenge_Encounter
+PatternSheet,Tassha_Revenge_Pattern
+PatternSheet,Tassha_Revenge_Patternmain
+,
+AnimationSheet,More_Bosses_Anim
+EnemySheet,More_Bosses_Enemy
+TitleSheet,More_Bosses_Title
+EncounterSheet,More_Bosses_Encounter
+PatternSheet,Sunnie_Radiant_Dragon_Pattern
+PatternSheet,Sunnie_Radiant_Dragon_Pattern_Singleplayer
+PatternSheet,Nyxa_Midnight_Trader_Pattern
+PatternSheet,Nyxa_Midnight_Trader_Pattern_Singleplayer

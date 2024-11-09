@@ -1,0 +1,4 @@
+lineType,enemyKey,enemyPosX,enemyPosY,health,pattNormalSingle,pattHardSingle,pattLunarSingle,pattNormal,pattHard,pattLunar
+,,,,,,,,,,
+encounter,enc_dreadwyrm_heir,,,,,,,,,
+enemy,en_dreadwyrm_heir,400,0,12000,mbp_dreadwyrm0_s,mbp_dreadwyrm0_s,mbp_dreadwyrm0_s,mbp_dreadwyrm0,mbp_dreadwyrm0,mbp_dreadwyrm0
