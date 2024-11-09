@@ -1,0 +1,8 @@
+lineType,enemyKey,enemyPosX,enemyPosY,health,pattNormalSingle,pattHardSingle,pattLunarSingle,pattNormal,pattHard,pattLunar
+,,,,,,,,,,
+encounter,enc_test_boss,,,,,,,,,
+enemy,en_puddle_poison_frog,400,0,6000,mbp_test_boss0_s,mbp_test_boss0_s,mbp_test_boss0_s,mbp_test_boss0_s,mbp_test_boss0_s,mbp_test_boss0_s
+encounter,enc_sunnie_radiant_dragon,,,,,,,,,
+enemy,en_sunnie_radiant_dragon,400,0,12000,mbp_sunnie_radiant_dragon0_s,mbp_sunnie_radiant_dragon0_s,mbp_sunnie_radiant_dragon0_s,mbp_sunnie_radiant_dragon0_s,mbp_sunnie_radiant_dragon0_s,mbp_sunnie_radiant_dragon0_s
+encounter,enc_nyxa_midnight_trader,,,,,,,,,
+enemy,en_nyxa_midnight_trader,400,0,7000,mbp_nyxa_midnight_trader0_s,mbp_nyxa_midnight_trader0_s,mbp_nyxa_midnight_trader0_s_lunar,mbp_nyxa_midnight_trader0_s,mbp_nyxa_midnight_trader0_s,mbp_nyxa_midnight_trader0_s_lunar

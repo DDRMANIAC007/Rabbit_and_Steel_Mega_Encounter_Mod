@@ -1,0 +1,24 @@
+newPattern,mbp_sunnie_radiant_dragon0_s,
+,,
+time,0,
+,,
+zoom,0.9,
+setExpMult,3,1.2
+,,
+,,
+dialog,3000,Rise and Shine!
+,,
+timeRepeating,0,50300
+pattAdd,mbp_sunnie_radiant_dragon0_pt2_s,
+,,
+timeRepeating,17900,50300
+pattAdd,mbp_sunnie_radiant_dragon0_pt3_s,
+,,
+timeRepeating,35300,50300
+pattAdd,mbp_sunnie_radiant_dragon0_pt4_s,
+,,
+timeRepeating,36700,50300
+pattAdd,mbp_sunnie_radiant_dragon0_pt5_s,
+,,
+timeRepeating,44700,50300
+pattAdd,mbp_sunnie_radiant_dragon0_pt6_s,

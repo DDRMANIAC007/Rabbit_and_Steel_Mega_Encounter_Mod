@@ -1,0 +1,4 @@
+lineType,enemyKey,enemyPosX,enemyPosY,health,pattNormalSingle,pattHardSingle,pattLunarSingle,pattNormal,pattHard,pattLunar
+,,,,,,,,,,
+encounter,enc_tassha_fight,,,,,,,,,
+enemy,en_wolf_snowfur,400,0,19000,0,0,0,mbp_wolf_fight,mbp_wolf_fight,mbp_wolf_fight
