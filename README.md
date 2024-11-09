@@ -11,7 +11,7 @@ Dreadwyrm Encounter - Dreadwyrm Heir (Lunar)
 
 Tassha's Revenge - Tassha, the Snowfur Wolf (Lunar) (Multiplayer only)
 
-More Bosses - Sunnie, the Radiant Dragon (Lunar) | Nyxa, the Midnight Trader (Lunar)
+More Bosses - Sunnie, the Radiant Dragon (Hard) | Nyxa, the Midnight Trader (Hard)
 
 # Where do the encounters appear?
 
