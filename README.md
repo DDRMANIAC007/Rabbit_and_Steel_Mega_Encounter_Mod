@@ -22,4 +22,4 @@ Tassha, the Snowfur Wolf - King's Arsenal replacing the vanilla Tassha, the Snow
 
 Sunnie, the Radiant Dragon - Red Darkhouse replacing Illie, the Emerald Dragon
 
-Nyxa, the Midnight Trader - Churchmouse Streets replacing Meg, the Rosemage Mouse &amp; Varo, the Commander Mouse
+Nyxa, the Midnight Trader - Nyxa, the Midnight Trader - Red Darkhouse replacing Kuu, the Silver Dragon &amp; Pi, the Golden Dragon (This will likely change later)
