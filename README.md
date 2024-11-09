@@ -10,9 +10,7 @@ Dreadwyrm Encounter - Dreadwyrm Heir (Lunar)
 
 Tassha's Revenge - Tassha, the Snowfur Wolf (Lunar) (Multiplayer only)
 
-More Bosses - Sunnie, the Radiant Dragon | Nyxa, the Midnight Trader
-
-Halfmetal - The secret vanilla fights (enc_bird_sophomore0;enc_dragon_granite0;enc_mouse_cadet0;enc_wolf_blackear0;enc_frog_tinkerer0)
+More Bosses - Sunnie, the Radiant Dragon (Lunar) | Nyxa, the Midnight Trader (Lunar)
 
 # Where do the encounters appear?
 
@@ -23,13 +21,3 @@ Tassha, the Snowfur Wolf - King's Arsenal replacing the vanilla Tassha, the Snow
 Sunnie, the Radiant Dragon - Red Darkhouse replacing BOSSNAME
 
 Nyxa, the Midnight Trader - AREANAME replacing BOSSNAME
-
-enc_bird_sophomore0 - Scholar's Nest replacing BOSSNAME
-
-enc_dragon_granite0 - Red Darkhouse replacing BOSSNAME
-
-enc_mouse_cadet0 - Churchmouse Streets replacing BOSSNAME
-
-enc_wolf_blackear0 - King's Arsenal replacing BOSSNAME
-
-enc_frog_tinkerer0 - Emerald Lakeside replacing BOSSNAME
