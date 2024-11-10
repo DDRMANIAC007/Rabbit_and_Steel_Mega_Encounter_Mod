@@ -13,6 +13,8 @@ Tassha's Revenge - Tassha, the Snowfur Wolf (Lunar) (Multiplayer only)
 
 More Bosses - Sunnie, the Radiant Dragon (Hard) | Nyxa, the Midnight Trader (Hard)
 
+Bullet Hell Merran - Merran, the Steeltooth Wolf (All difficulties)
+
 # Where do the encounters appear?
 
 Dreadwyrm Heir - Red Darkhouse replacing Karsi, the Ruby Dragon
@@ -22,3 +24,5 @@ Tassha, the Snowfur Wolf - King's Arsenal replacing the vanilla Tassha, the Snow
 Sunnie, the Radiant Dragon - Red Darkhouse replacing Illie, the Emerald Dragon
 
 Nyxa, the Midnight Trader - Red Darkhouse replacing Kuu, the Silver Dragon &amp; Pi, the Golden Dragon (This will likely change later)
+
+Merran, the Steeltooth Wolf - King's Arsenal replacing Mink, the Greyeyed Wolf
