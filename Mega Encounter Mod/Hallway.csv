@@ -17,7 +17,7 @@ bossbattle,enc_bird_valedictorian0
 ,
 hallway,hw_arsenal
 shop,
-battle,enc_wolf_greyeye0;enc_wolf_greyeye1
+battle,enc_bullet_hell_fight
 battle,enc_wolf_bluepaw0;enc_wolf_bluepaw1
 battle,enc_tassha_fight
 loot,
@@ -33,7 +33,7 @@ bossbattle,enc_dragon_mythril0
 ,
 hallway,hw_streets
 shop,
-battle,enc_bullet_hell_fight
+battle,enc_mouse_archer0;enc_mouse_archer1
 battle,enc_wolf_bluepaw0;enc_wolf_bluepaw1
 battle,enc_mouse_rosemage0
 loot,
