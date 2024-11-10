@@ -34,7 +34,7 @@ bossbattle,enc_dragon_mythril0
 hallway,hw_streets
 shop,
 battle,enc_mouse_archer0;enc_mouse_archer1
-battle,enc_mouse_oakspear0;enc_mouse_oakspear1
+battle,enc_bullet_hell_fight
 battle,enc_mouse_rosemage0
 loot,
 bossbattle,enc_mouse_paladin0
