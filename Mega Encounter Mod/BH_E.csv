@@ -1,0 +1,4 @@
+lineType,enemyKey,enemyPosX,enemyPosY,health,pattNormalSingle,pattHardSingle,pattLunarSingle,pattNormal,pattHard,pattLunar
+,,,,,,,,,,
+encounter,enc_bullet_hell_fight,,,
+enemy,en_wolf_steeltooth,0,0,15000,mbp_BH_fight_main,mbp_BH_fight_main,mbp_BH_fight_main,mbp_BH_fight_main,mbp_BH_fight_main,mbp_BH_fight_main
