@@ -1,4 +1,4 @@
-newPattern,mbp_sunnie_radiant_dragon0_s,
+newPattern,mbp_sunnie_radiant_dragon0,
 ,,
 time,0,
 ,,
@@ -9,16 +9,16 @@ setExpMult,3,1.2
 dialog,3000,Rise and Shine!
 ,,
 timeRepeating,0,50300
-pattAdd,mbp_sunnie_radiant_dragon0_pt2_s,
+pattAdd,mbp_sunnie_radiant_dragon0_sunlight,
 ,,
 timeRepeating,17900,50300
-pattAdd,mbp_sunnie_radiant_dragon0_pt3_s,
+pattAdd,mbp_sunnie_radiant_dragon0_sunbeam_right,
 ,,
 timeRepeating,35300,50300
-pattAdd,mbp_sunnie_radiant_dragon0_pt4_s,
+pattAdd,mbp_sunnie_radiant_dragon0_sunbeam_left,
 ,,
 timeRepeating,36700,50300
-pattAdd,mbp_sunnie_radiant_dragon0_pt5_s,
+pattAdd,mbp_sunnie_radiant_dragon0_come_close,
 ,,
 timeRepeating,44700,50300
-pattAdd,mbp_sunnie_radiant_dragon0_pt6_s,
+pattAdd,mbp_sunnie_radiant_dragon0_explosion,

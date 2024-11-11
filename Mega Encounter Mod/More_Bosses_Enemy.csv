@@ -1,4 +1,4 @@
 key,animationKey,animationKeyTransform,color,colorSaturated,radius,drawScale,focusScale,isSpawn,spawnDrawType
 en_sunnie_radiant_dragon,anim_sunnie_radiant_dragon,anim_sunnie_radiant_dragon,#FBF398,#FBF398,300,0.45,1,0,0
-en_puddle_poison_frog,anim_puddle_poison_frog,anim_puddle_poison_frog,#3AD889,#3AD889,300,0.45,1,0,0
+en_puddles_poison_frog,anim_puddles_poison_frog,anim_puddles_poison_frog,#3AD889,#3AD889,500,0.6,1,0,0
 en_nyxa_midnight_trader,anim_nyxa_midnight_trader,anim_nyxa_midnight_trader,#FFFFFF,#FFFFFF,300,0.45,1,0,0
