@@ -17,10 +17,12 @@ AnimationSheet,More_Bosses_Anim
 EnemySheet,More_Bosses_Enemy
 TitleSheet,More_Bosses_Title
 EncounterSheet,More_Bosses_Encounter
+PatternSheet,Sunnie_Radiant_Dragon_Moves
 PatternSheet,Sunnie_Radiant_Dragon_Pattern
-PatternSheet,Sunnie_Radiant_Dragon_Pattern_Singleplayer
+PatternSheet,Nyxa_Midnight_Trader_Moves
 PatternSheet,Nyxa_Midnight_Trader_Pattern
-PatternSheet,Nyxa_Midnight_Trader_Pattern_Singleplayer
+PatternSheet,Puddles_Poison_Frog_Moves
+PatternSheet,Puddles_Poison_Frog_Pattern
 ,
 EncounterSheet,BH_E
 PatternSheet,BH
