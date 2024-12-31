@@ -1,0 +1,52 @@
+####################################################################
+####################################################################
+newPattern,mbp_dragon_granite_0m
+time,0
+## 敵の外側弾幕&味方全員にAOE start
+anim,0,3000,4000
+pattVarReset
+pattVars,warningDelay;0,spawnDelay;3000,radius;700,number;50,spd;20,element;blue,doubled;2,warnMsg;1,
+pattAdd,bp_prscircle_follow_enemy
+pattVarReset
+pattVars,warningDelay;0,spawnDelay;3000,radius;300,trgBinary;all,warnMsg;1,
+pattAdd,bp_circle_spreads
+## 敵の外側弾幕 end
+
+
+####################################################################
+####################################################################
+newPattern,mbp_dragon_granite_1m
+time,0
+
+## 中心にAOE設置 start
+pattVars,warningDelay;0,spawnDelay;3000,eraseDelay;999000,scale;1.5,type;1,numPoints;1,posX_0;bfCenterX,posY_0;bfCenterY
+pattAdd,bp_dark_targeted
+## 中心にAOE設置 end
+
+
+## 無限に回転 start
+pattVars,warningDelay;0,spawnDelay;3000,rot;random(90),num;4,speedMult;-1,width;120
+pattAddPos,bp_ray_spinning_permanent,enemyX,enemyY
+## 無限に回転 end
+
+
+## 螺旋弾幕 start
+setVar,shotAngle,random(60)
+setVar,distance,700
+timeRepeating,2000,700
+pattVarReset
+pattVars,spawnDelay;0,type;0,angle;shotAngle,offset;0,spd;3,num;6,
+pattAddPos,bp_dark2_blast,enemyX,enemyY
+pattVars,spawnDelay;100,angle;shotAngle+5
+pattAddPos,bp_dark2_blast,enemyX,enemyY
+pattVars,spawnDelay;200,angle;shotAngle+10
+pattAddPos,bp_dark2_blast,enemyX,enemyY
+pattVars,spawnDelay;300,angle;shotAngle+15
+pattAddPos,bp_dark2_blast,enemyX,enemyY
+pattVars,spawnDelay;400,angle;shotAngle+20
+pattAddPos,bp_dark2_blast,enemyX,enemyY
+setVar,shotAngle,shotAngle+35
+condVarCheck,shotAngle,>=,360
+setVar,shotAngle,shotAngle-360
+
+## 螺旋弾幕 end

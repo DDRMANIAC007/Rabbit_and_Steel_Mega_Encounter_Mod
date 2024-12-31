@@ -1,0 +1,17 @@
+newPattern,mbp_frog_idol
+time,0
+zoom,0.87
+setExpMult,6,1.5
+pattVars,delay;0,hbsIndex;hbs(hbs_flutterstep),hbsDuration;999000,hbsStrength;0
+pattAdd,bp_apply_hbs_synced
+
+time,1000
+transform,anim_frog_idol_big,900,0.8,4,2
+setFlags,2
+
+
+
+time,10000
+##pattAdd,mbp_frog_idol_m20
+pattAdd,mbp_frog_idol_m00
+

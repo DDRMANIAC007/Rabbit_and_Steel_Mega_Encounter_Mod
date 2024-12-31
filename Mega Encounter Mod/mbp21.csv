@@ -1,0 +1,17 @@
+newPattern,mbp_bird_archon
+time,0
+setFlags,8
+zoom,0.80
+setExpMult,3,1.2
+pattVars,delay;0,hbsIndex;hbs(hbs_flutterstep),hbsDuration;999000,hbsStrength;0
+pattAdd,bp_apply_hbs_synced
+pattVars,delay;0,hbsIndex;hbs(hbs_nodefense),hbsDuration;999000,hbsStrength;0
+pattAdd,bp_apply_hbs_synced
+
+
+time,1200
+move,bfCenterX,bfCenterY,500
+
+
+timeRepeating,2000,15000
+pattAdd,mbp_bird_archon_0m

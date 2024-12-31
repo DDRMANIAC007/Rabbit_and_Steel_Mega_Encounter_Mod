@@ -1,0 +1,17 @@
+newPattern,mbp_dragon_silver
+time,0
+zoom,0.8
+setExpMult,1,1
+pattVars,delay;0,hbsIndex;hbs(hbs_flutterstep),hbsDuration;999000,hbsStrength;0
+pattAdd,bp_apply_hbs_synced
+
+time,1000
+pattAdd,mbp_dragon_silver_0m
+
+
+newPattern,mbp_dragon_gold
+time,0
+setExpMult,1,1
+
+time,5500
+pattAdd,mbp_dragon_gold_0m

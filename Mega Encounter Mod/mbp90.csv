@@ -1,0 +1,13 @@
+newPattern,mbp_queens_staff
+time,0
+setFlags,8
+zoom,0.90
+setExpMult,1,1
+pattVars,delay;0,hbsIndex;hbs(hbs_flutterstep),hbsDuration;999000,hbsStrength;0
+pattAdd,bp_apply_hbs_synced
+
+time,1500
+move,bfCenterX,bfCenterY,500
+
+timeRepeating,2200,4200
+pattAdd,mbp_queens_staff_0m

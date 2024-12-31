@@ -1,0 +1,16 @@
+newPattern,mbp_frog_seamstress
+time,0
+zoom,0.70
+setExpMult,1,1
+pattVars,delay;0,hbsIndex;hbs(hbs_flutterstep),hbsDuration;999000,hbsStrength;0
+pattAdd,bp_apply_hbs_synced
+
+move,bfCenterX,bfCenterY,1000,
+time,2000
+pattAdd,mbp_frog_seamstress_0m
+
+timeRepeating,3000,2000
+pattAdd,mbp_frog_seamstress_1m
+
+timeRepeating,6000,38000
+pattAdd,mbp_frog_seamstress_2m
