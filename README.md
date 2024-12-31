@@ -4,9 +4,10 @@ A mod for Rabbit &amp; Steel that combines multiple encounter mods into one sing
 
 All areas past the starting area have 1 additional loot sphere. Pale keep has 3 additional loot spheres! This mod is VERY difficult to beat on Lunar difficulty! (Potentially the hardest on the entire workshop as of the current time)
 
-This version of the mod includes any custom sprites used by the mods. This requires all players to have the mod otherwise they will see a placeholder instead of custom sprites. 
-You can find the vanilla version of the mod here:
-https://github.com/DDRMANIAC007/Rabbit_and_Steel_Mega_Encounter_Mod/tree/main-vanilla
+This version of the mod replaces any custom sprites with sprites from the vanilla game. This allows players without the mod to see a boss sprite.
+You can find the regular version of the mod here:
+
+https://github.com/DDRMANIAC007/Rabbit_and_Steel_Mega_Encounter_Mod
 
 # Current list of included mods/fights
 
