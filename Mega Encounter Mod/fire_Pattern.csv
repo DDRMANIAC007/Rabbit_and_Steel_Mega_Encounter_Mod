@@ -1,0 +1,70 @@
+,,
+,,
+## HARD MODE,,
+newPattern,mbp_hbd0,
+time,0,
+dialog,2000,The heat of battle...
+,,
+pattAdd,mbp_shadowBarrier,
+,,
+timeRepeating,2000,31000
+pattAdd,mbp_darkWave,
+,,
+timeRepeating,9000,31000
+pattAdd,mbp_fullMoon,
+,,
+timeRepeating,16000,31000
+pattAdd,mbp_spinningLeap,
+,,
+,,
+,,
+,,
+newPattern,mbp_brs0,
+time,0,
+dialog,2000,The burning fury inside...
+,,
+,,
+timeRepeating,2000,31000
+pattAdd,mbp_Jab,
+,,
+timeRepeating,9000,31000
+pattAdd,mbp_flameHook,
+,,
+timeRepeating,16000,31000
+pattAdd,mbp_fury,
+,,
+,,
+,,
+,,
+## NORMAL MODE,,
+newPattern,mbp_hbd1,
+time,0,
+dialog,2000,The heat of battle...
+,,
+pattAdd,mbp_shadowBarrier,
+,,
+timeRepeating,2000,48000
+pattAdd,mbp_darkWave_n,
+,,
+timeRepeating,11000,48000
+pattAdd,mbp_fullMoon_n,
+,,
+timeRepeating,18000,48000
+pattAdd,mbp_spinningLeap_n,
+,,
+,,
+,,
+,,
+newPattern,mbp_brs1,
+time,0,
+dialog,2000,The burning fury inside...
+,,
+,,
+timeRepeating,2000,48000
+pattAdd,mbp_Jab_n,
+,,
+timeRepeating,11000,48000
+pattAdd,mbp_flameHook,
+,,
+timeRepeating,18000,48000
+pattAdd,mbp_fury_n,

@@ -1,0 +1,11 @@
+key,animationKey,animationKeyTransform,color,colorSaturated,radius,drawScale,focusScale,isSpawn,spawnDrawType
+en_ghWiz,anim_ghWiz,anim_ghWiz,#b37dff,#b37dff,200,0.4,1,0,0
+en_ghSps,anim_ghSps,anim_ghSps,#b37dff,#b37dff,200,0.4,1,0,0
+en_ghSni,anim_ghSni,anim_ghSni,#7db0ff,#7db0ff,200,0.4,1,0,0
+en_ghAsn,anim_ghAsn,anim_ghAsn,#7db0ff,#7db0ff,200,0.4,1,0,0
+en_ghDru,anim_ghDru,anim_ghDru,#7fff7d,#7fff7d,200,0.4,1,0,0
+en_ghAnc,anim_ghAnc,anim_ghAnc,#7fff7d,#7fff7d,200,0.4,1,0,0
+en_ghDef,anim_ghDef,anim_ghDef,#ffffd1,#ffffd1,200,0.4,1,0,0
+en_ghDnc,anim_ghDnc,anim_ghDnc,#ffffd1,#ffffd1,200,0.4,1,0,0
+en_ghHbd,anim_ghHbd,anim_ghHbd,#ff7d7d,#ff7d7d,200,0.4,1,0,0
+en_ghBrs,anim_ghBrs,anim_ghBrs,#ff7d7d,#ff7d7d,200,0.4,1,0,0

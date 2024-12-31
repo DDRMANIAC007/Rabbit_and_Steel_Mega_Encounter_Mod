@@ -1,0 +1,68 @@
+,,
+,,
+## HARD MODE,,
+newPattern,mbp_def0,
+time,0,
+dialog,2000,This broken shield...
+,,
+,,
+timeRepeating,0,47000
+pattAdd,mbp_NoviHoly,
+,,
+timeRepeating,10000,47000
+pattAdd,mbp_Thrust,
+,,
+timeRepeating,20000,47000
+pattAdd,mbp_AstaHoly,
+,,
+,,
+,,
+,,
+newPattern,mbp_dnc0,
+time,0,
+dialog,2000,This forgotten song...
+,,
+,,
+timeRepeating,0,47000
+pattAdd,mbp_RosePetal,
+,,
+timeRepeating,10000,47000
+pattAdd,mbp_Grace,
+,,
+timeRepeating,20000,47000
+pattAdd,mbp_Blossom,
+,,
+,,
+,,
+,,
+## NORMAL MODE,,
+newPattern,mbp_def1,
+time,0,
+dialog,2000,This broken shield...
+,,
+,,
+timeRepeating,0,47000
+pattAdd,mbp_NoviHoly_n,
+,,
+timeRepeating,10000,47000
+pattAdd,mbp_Thrust_n,
+,,
+timeRepeating,20000,47000
+pattAdd,mbp_AstaHoly,
+,,
+,,
+,,
+,,
+newPattern,mbp_dnc1,
+time,0,
+dialog,2000,This forgotten song...
+,,
+,,
+timeRepeating,0,47000
+pattAdd,mbp_RosePetal,
+,,
+timeRepeating,10000,47000
+pattAdd,mbp_Grace,
+,,
+timeRepeating,20000,47000
+pattAdd,mbp_Blossom_n,
