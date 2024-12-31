@@ -1,0 +1,15 @@
+newPattern,mbp_wolf_steeltooth
+time,0
+zoom,0.80
+setExpMult,6,1.5
+pattVars,delay;0,hbsIndex;hbs(hbs_flutterstep),hbsDuration;999000,hbsStrength;0
+pattAdd,bp_apply_hbs_synced
+
+time,1000
+transform,anim_wolf_steeltooth_big,800,0.8,4,2
+setFlags,2
+
+
+time,10000
+pattAdd,mbp_wolf_steeltooth_00m
+

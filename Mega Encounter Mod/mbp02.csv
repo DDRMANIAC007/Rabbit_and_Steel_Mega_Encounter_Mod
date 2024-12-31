@@ -1,0 +1,14 @@
+newPattern,mbp_dragon_granite
+time,0
+zoom,0.7
+setExpMult,1,1
+pattVars,delay;0,hbsIndex;hbs(hbs_flutterstep),hbsDuration;999000,hbsStrength;0
+pattAdd,bp_apply_hbs_synced
+
+move,bfCenterX,bfCenterY,1000
+
+timeRepeating,2000,4000
+pattAdd,mbp_dragon_granite_0m
+
+time,2000
+pattAdd,mbp_dragon_granite_1m

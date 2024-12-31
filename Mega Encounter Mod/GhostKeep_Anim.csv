@@ -1,0 +1,11 @@
+key,filepath,filepathLowQuality,spriteNumber,centerX,centerY,headOffsetX,headOffsetY,standing,forward,backward,hurt,death,attCharge0,attSmear0,attAttack0,attCharge1,attSmear1,attAttack1,attCharge2,attSmear2,attAttack2,attCharge3,attSmear3,attAttack3
+anim_ghWiz,ghost_wizard.png,ghost_wizard_lq.png,22,250,280,0,-180,0-1,2-3,4-5,6,7,8-9,10,11-12,13,14-15,16,17-18,19,20-21,,,
+anim_ghSps,ghost_spellsword.png,ghost_spellsword_lq.png,26,250,280,0,-180,0-1,2-3,4-5,6,7,8-9,10,11-12,13-14,15,16-17,18-19,20,21-22,23,24,24-25
+anim_ghSni,ghost_sniper.png,ghost_sniper_lq.png,26,250,280,0,-180,0-1,2-3,4-5,6,7,8-9,10,11-12,13,14,15-16,17-18,19,20-21,22,22,22-23-24-25-1
+anim_ghAsn,ghost_assassin.png,ghost_assassin_lq.png,24,250,280,0,-180,0-1,2-3,4-5,6,7,8-9,10,11-12,13,14,15-16,17,17,17-18-19-20-21,22,23,22-23
+anim_ghDru,ghost_druid.png,ghost_druid_lq.png,23,250,280,0,-180,0-1,2-3,4-5,6,7,8-9,10,11-12,13-14,15,16-17,18-19,20,21-22,,,
+anim_ghAnc,ghost_ancient.png,ghost_ancient_lq.png,23,250,280,0,-180,0-1,2-3,4-5,6,7,8-9,10,11-12,13-14,15,16-17,18-19,20,21-22,,,
+anim_ghDef,ghost_defender.png,ghost_defender_lq.png,22,250,280,0,-180,0-1,2-3,4-5,6,7,8,9,10-11,12-13,14,15-16,17-18,19,20-21,,,
+anim_ghDnc,ghost_dancer.png,ghost_dancer_lq.png,25,250,280,0,-180,0-1,2-3,4-5,6,7,8-9,10,11-12-13-14,15-16,17,18-19,20-21,22,23-24,,,
+anim_ghHbd,ghost_hblade.png,ghost_hblade_lq.png,23,250,280,0,-180,0-1,2-3,4-5,6,7,8-9,10,11-12,13-14,15-16,17-18,19,20,21-22,15-16,15-16,15-16
+anim_ghBrs,ghost_bruiser.png,ghost_bruiser_lq.png,24,250,280,0,-180,0-1,2-3,4-5,6,7,8,9,10-11,12-13,14,15-16,17-18,19,20-21,22,22,22-23

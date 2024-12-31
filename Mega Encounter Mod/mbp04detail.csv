@@ -1,0 +1,97 @@
+####################################################################
+####################################################################
+newPattern,mbp_dragon_ruby_0m
+time,0
+## 味方全員にAOE start
+anim,0,3000,4000
+pattVarReset
+pattVars,warningDelay;0,spawnDelay;3000,radius;400,trgBinary;all,warnMsg;1,
+pattAdd,bp_circle_spreads
+pattVarReset
+pattVars,warningDelay;0,spawnDelay;3000,radius;700,number;50,spd;10,element;red,doubled;false,warnMsg;1,
+pattAdd,bp_prscircle_follow_enemy
+## 味方全員にAOE end
+
+
+####################################################################
+####################################################################
+newPattern,mbp_dragon_ruby_1m
+time,0
+##pattVars,delay;500,hbsIndex;hbs(hbs_decay),hbsDuration;13000,hbsStrength;0
+##pattAdd,bp_apply_hbs_synced
+##pattVars,spawnDelay;500,hbsIndex;hbs(hbs_holyshield),hbsDuration;13000,hbsStrength;10
+##pattAdd,bp_self_hbs
+
+
+
+## 中心にAOE設置 start
+pattVars,warningDelay;0,spawnDelay;3000,eraseDelay;999000,scale;1,type;1,numPoints;1,posX_0;bfCenterX,posY_0;bfCenterY
+pattAdd,bp_dark_targeted
+## 中心にAOE設置 end
+
+## 囲い start
+## pattVarReset
+## orderBinRandom,2,2
+## pattVars,spawnDelay;0,eraseDelay;4000,orderBin_0;orderBin0,orderBin_1;orderBin1,orderBin_2;0,orderBin_3;0
+## pattAdd,bp_showgroups,
+## pattVarReset
+## pattVars,spawnDelay;3000,trgBinary;orderBin0,element;blue,width;bfHeight*(1/2),height;bfHeight,
+## pattAddPos,bp_fieldlimit_rectangle,bfCenterX,bfCenterY
+## pattVars,trgBinary;orderBin1,element;red,width;bfHeight,height;bfHeight*(1/2),
+## pattAddPos,bp_fieldlimit_rectangle,bfCenterX,bfCenterY
+## 囲い end
+
+## 無限に回転 start
+pattVars,warningDelay;0,spawnDelay;3000,rot;random(90),num;8,speedMult;-0.5,width;120
+pattAddPos,bp_ray_spinning_permanent,enemyX,enemyY
+## 無限に回転 end
+
+
+## 置きAOE start
+timeRepeating,4000,500
+pattVarReset
+orderBinRandom,1,1,1,1
+pattPositionOrderBin,orderBin0
+pattVars,warningDelay;0,spawnDelay;2000,eraseDelay;7000,scale;0.30,type;0,
+##pattAdd,bp_dark_targeted
+condVarCheck,allyNum,>=,1
+setVar,targetId,randomTargetId(orderBin0)
+setVar,targetX,playerXPos(targetId)
+setVar,targetY,playerYPos(targetId)
+setVar,targetAngle,pointFrom(bfCenterX>bfCenterY>targetX>targetY)
+setVar,targetDistance,pointDist(bfCenterX>bfCenterY>targetX>targetY)
+setVar,posNextX0,bfCenterX+targetDistance*cos(targetAngle-45)
+setVar,posNextY0,bfCenterY+targetDistance*sin(targetAngle-45)
+pattVars,numPoints;1,posX_0;posNextX0,posY_0;posNextY0
+pattAdd,bp_dark_targeted
+condVarCheck,allyNum,>=,2
+setVar,targetId,randomTargetId(orderBin1)
+setVar,targetX,playerXPos(targetId)
+setVar,targetY,playerYPos(targetId)
+setVar,targetAngle,pointFrom(bfCenterX>bfCenterY>targetX>targetY)
+setVar,targetDistance,pointDist(bfCenterX>bfCenterY>targetX>targetY)
+setVar,posNextX0,bfCenterX+targetDistance*cos(targetAngle-45)
+setVar,posNextY0,bfCenterY+targetDistance*sin(targetAngle-45)
+pattVars,numPoints;1,posX_0;posNextX0,posY_0;posNextY0
+pattAdd,bp_dark_targeted
+condVarCheck,allyNum,>=,3
+setVar,targetId,randomTargetId(orderBin2)
+setVar,targetX,playerXPos(targetId)
+setVar,targetY,playerYPos(targetId)
+setVar,targetAngle,pointFrom(bfCenterX>bfCenterY>targetX>targetY)
+setVar,targetDistance,pointDist(bfCenterX>bfCenterY>targetX>targetY)
+setVar,posNextX0,bfCenterX+targetDistance*cos(targetAngle-45)
+setVar,posNextY0,bfCenterY+targetDistance*sin(targetAngle-45)
+pattVars,numPoints;1,posX_0;posNextX0,posY_0;posNextY0
+pattAdd,bp_dark_targeted
+condVarCheck,allyNum,>=,4
+setVar,targetId,randomTargetId(orderBin3)
+setVar,targetX,playerXPos(targetId)
+setVar,targetY,playerYPos(targetId)
+setVar,targetAngle,pointFrom(bfCenterX>bfCenterY>targetX>targetY)
+setVar,targetDistance,pointDist(bfCenterX>bfCenterY>targetX>targetY)
+setVar,posNextX0,bfCenterX+targetDistance*cos(targetAngle-45)
+setVar,posNextY0,bfCenterY+targetDistance*sin(targetAngle-45)
+pattVars,numPoints;1,posX_0;posNextX0,posY_0;posNextY0
+pattAdd,bp_dark_targeted
+## 置きAOE end

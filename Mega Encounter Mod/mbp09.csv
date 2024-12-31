@@ -1,0 +1,17 @@
+newPattern,mbp_frog_songstress
+time,0
+zoom,0.94
+setExpMult,1,1
+pattVars,delay;0,hbsIndex;hbs(hbs_flutterstep),hbsDuration;999000,hbsStrength;0
+pattAdd,bp_apply_hbs_synced
+
+timeRepeating,1000,12000
+pattAdd,mbp_frog_songstress_0m
+
+
+newPattern,mbp_frog_musician
+time,0
+setExpMult,1,1
+
+timeRepeating,1000,12000
+pattAdd,mbp_frog_musician_0m

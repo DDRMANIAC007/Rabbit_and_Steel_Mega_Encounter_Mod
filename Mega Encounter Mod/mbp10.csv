@@ -1,0 +1,17 @@
+newPattern,mbp_frog_painter
+time,0
+zoom,0.70
+setExpMult,3,1.2
+pattVars,delay;0,hbsIndex;hbs(hbs_flutterstep),hbsDuration;999000,hbsStrength;0
+pattAdd,bp_apply_hbs_synced
+
+move,bfCenterX,bfCenterY,1000,
+time,1000
+pattAdd,mbp_frog_painter_0m
+
+
+timeRepeating,3000,15000
+pattAdd,mbp_frog_painter_2m
+
+timeRepeating,3000,15000
+pattAdd,mbp_frog_painter_1m

@@ -1,0 +1,70 @@
+,,
+,,
+## HARD MODE,,
+newPattern,mbp_dru0,
+time,0,
+dialog,2000,The tide of nature...
+,,
+,,
+timeRepeating,1000,44000
+pattAdd,mbp_latLife,
+,,
+timeRepeating,11000,44000
+pattAdd,mbp_naturesBlessing,
+,,
+timeRepeating,20000,44000
+pattAdd,mbp_summonSpirit,
+,,
+,,
+,,
+,,
+,,
+newPattern,mbp_anc0,
+time,0,
+dialog,2000,The current of the abyss...
+,,
+,,
+timeRepeating,1000,44000
+pattAdd,mbp_marchCommand,
+,,
+timeRepeating,11000,44000
+pattAdd,mbp_strikeCommand,
+,,
+timeRepeating,20000,44000
+pattAdd,mbp_abyssalCall,
+,,
+,,
+,,
+,,
+## NORMAL MODE,,
+newPattern,mbp_dru1,
+time,0,
+dialog,2000,The tide of nature...
+,,
+,,
+timeRepeating,1000,48000
+pattAdd,mbp_latLife_n,
+,,
+timeRepeating,11000,48000
+pattAdd,mbp_naturesBlessing_n,
+,,
+timeRepeating,24000,48000
+pattAdd,mbp_summonSpirit,
+,,
+,,
+,,
+,,
+,,
+newPattern,mbp_anc1,
+time,0,
+dialog,2000,The current of the abyss...
+,,
+,,
+timeRepeating,1000,48000
+pattAdd,mbp_marchCommand_n,
+,,
+timeRepeating,11000,48000
+pattAdd,mbp_strikeCommand_n,
+,,
+timeRepeating,24000,48000
+pattAdd,mbp_abyssalCall_n,

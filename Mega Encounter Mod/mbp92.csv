@@ -1,0 +1,16 @@
+newPattern,mbp_queens_harp
+time,0
+setFlags,8
+zoom,0.80
+setExpMult,1,1
+pattVars,delay;0,hbsIndex;hbs(hbs_flutterstep),hbsDuration;999000,hbsStrength;0
+pattAdd,bp_apply_hbs_synced
+time,1500
+move,bfCenterX,bfCenterY,500
+
+time,2000
+pattVars,warningDelay;0,warningDelay2;0,spawnDelay;3200,hasFixed;true,element;blue,radius;300,trgBinary;all,warnMsg;1,displayNumber;0
+pattAddPos,bp_colormatch2,bfCenterX-400,bfCenterY
+
+timeRepeating,2200,13000
+pattAdd,mbp_queens_harp_0m

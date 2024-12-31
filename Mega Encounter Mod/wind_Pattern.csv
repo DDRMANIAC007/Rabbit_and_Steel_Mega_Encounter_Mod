@@ -1,0 +1,68 @@
+,,
+,,
+## HARD MODE,,
+newPattern,mbp_sni0,
+time,0,
+dialog,2000,Do you hear the arrow's whistle?
+,,
+,,
+timeRepeating,2000,35000
+pattAdd,mbp_Arrowshot,
+,,
+timeRepeating,13000,35000
+pattAdd,mbp_CarefulAim,
+,,
+timeRepeating,24000,35000
+pattAdd,mbp_Barrage,
+,,
+,,
+,,
+,,
+newPattern,mbp_asn0,
+time,0,
+dialog,2000,Do you hear the dagger in the dark?
+,,
+,,
+timeRepeating,2000,35000
+pattAdd,mbp_KnifeJuggle,
+,,
+timeRepeating,13000,35000
+pattAdd,mbp_Cut,
+,,
+timeRepeating,24000,35000
+pattAdd,mbp_Assassinate,
+,,
+,,
+,,
+,,
+## NORMAL MODE,,
+newPattern,mbp_sni1,
+time,0,
+dialog,2000,Do you hear the arrow's whistle?
+,,
+,,
+timeRepeating,2000,35000
+pattAdd,mbp_Arrowshot,
+,,
+timeRepeating,13000,35000
+pattAdd,mbp_CarefulAim_n,
+,,
+timeRepeating,24000,35000
+pattAdd,mbp_Barrage_n,
+,,
+,,
+,,
+,,
+newPattern,mbp_asn1,
+time,0,
+dialog,2000,Do you hear the dagger in the dark?
+,,
+,,
+timeRepeating,2000,35000
+pattAdd,mbp_KnifeJuggle,
+,,
+timeRepeating,13000,35000
+pattAdd,mbp_Cut_n,
+,,
+timeRepeating,24000,35000
+pattAdd,mbp_Assassinate,

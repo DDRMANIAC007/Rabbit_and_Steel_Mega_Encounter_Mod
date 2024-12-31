@@ -1,0 +1,16 @@
+newPattern,mbp_wolf_greyeye
+time,0
+zoom,0.85
+setExpMult,1,1
+pattVars,delay;0,hbsIndex;hbs(hbs_flutterstep),hbsDuration;999000,hbsStrength;0
+pattAdd,bp_apply_hbs_synced
+
+pattVars,spawnDelay;0,trgBinary;all,mult;1
+pattAdd,bp_tailwind_permanent
+
+
+time,2000
+pattAdd,mbp_wolf_greyeye_0m
+
+timeRepeating,13000,11000
+pattAdd,mbp_wolf_greyeye_1m
