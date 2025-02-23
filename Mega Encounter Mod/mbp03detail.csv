@@ -14,7 +14,9 @@ pattAdd,bp_thorns_bin
 
 time,2000
 setVar,shotA,random(360)
-pattVars,warningDelay;0,spawnDelay;0,showWarning;0,ringNum;1,spd_0;5,num;40,angle;shotA,type;1
+setVar,shotD,diffSwitch(1>1>2)
+setVar,shotN,diffSwitch(20>40>40)
+pattVars,warningDelay;0,spawnDelay;0,showWarning;0,ringNum;shotD,spd_1;3,spd_0;5,num;shotN,angle;shotA,type;1
 pattAddPos,bp_fire2_blast,enemyX,enemyY
 
 
@@ -24,7 +26,7 @@ setVar,targetP,randomTargetId(all)
 setVar,px,playerXPos(targetP)
 setVar,py,playerYPos(targetP)
 setVar,ringScale,250
-setVar,ringBase,24
+setVar,ringBase,36
 
 
 
@@ -32,37 +34,7 @@ setVar,ringIdx,0
 setVar,shotPos1X,enemyX+ringScale*cos(ringIdx*ringBase)
 setVar,shotPos1Y,enemyY+ringScale*sin(ringIdx*ringBase)
 setVar,shotAngle1,pointFrom(shotPos1X>shotPos1Y>px>py)
-pattVars,warningDelay;0,spawnDelay;0,showWarning;false,ringNum;1,spd_0;6,num;1,angle;shotAngle1,type;1
-pattAddPos,bp_fire2_blast,shotPos1X,shotPos1Y
-setVar,ringIdx,ringIdx+1
-setVar,shotPos1X,enemyX+ringScale*cos(ringIdx*ringBase)
-setVar,shotPos1Y,enemyY+ringScale*sin(ringIdx*ringBase)
-setVar,shotAngle1,pointFrom(shotPos1X>shotPos1Y>px>py)
-pattVars,angle;shotAngle1
-pattAddPos,bp_fire2_blast,shotPos1X,shotPos1Y
-setVar,ringIdx,ringIdx+1
-setVar,shotPos1X,enemyX+ringScale*cos(ringIdx*ringBase)
-setVar,shotPos1Y,enemyY+ringScale*sin(ringIdx*ringBase)
-setVar,shotAngle1,pointFrom(shotPos1X>shotPos1Y>px>py)
-pattVars,angle;shotAngle1
-pattAddPos,bp_fire2_blast,shotPos1X,shotPos1Y
-setVar,ringIdx,ringIdx+1
-setVar,shotPos1X,enemyX+ringScale*cos(ringIdx*ringBase)
-setVar,shotPos1Y,enemyY+ringScale*sin(ringIdx*ringBase)
-setVar,shotAngle1,pointFrom(shotPos1X>shotPos1Y>px>py)
-pattVars,angle;shotAngle1
-pattAddPos,bp_fire2_blast,shotPos1X,shotPos1Y
-setVar,ringIdx,ringIdx+1
-setVar,shotPos1X,enemyX+ringScale*cos(ringIdx*ringBase)
-setVar,shotPos1Y,enemyY+ringScale*sin(ringIdx*ringBase)
-setVar,shotAngle1,pointFrom(shotPos1X>shotPos1Y>px>py)
-pattVars,angle;shotAngle1
-pattAddPos,bp_fire2_blast,shotPos1X,shotPos1Y
-setVar,ringIdx,ringIdx+1
-setVar,shotPos1X,enemyX+ringScale*cos(ringIdx*ringBase)
-setVar,shotPos1Y,enemyY+ringScale*sin(ringIdx*ringBase)
-setVar,shotAngle1,pointFrom(shotPos1X>shotPos1Y>px>py)
-pattVars,angle;shotAngle1
+pattVars,warningDelay;0,spawnDelay;0,showWarning;false,ringNum;1,spd_0;6,num;1,angle;shotAngle1,type;0
 pattAddPos,bp_fire2_blast,shotPos1X,shotPos1Y
 setVar,ringIdx,ringIdx+1
 setVar,shotPos1X,enemyX+ringScale*cos(ringIdx*ringBase)

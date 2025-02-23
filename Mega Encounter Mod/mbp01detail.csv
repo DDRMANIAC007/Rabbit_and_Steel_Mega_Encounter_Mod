@@ -10,9 +10,10 @@ pattAdd,bp_circle_position
 
 ##周期弾幕 start
 setVar,shotAngle,5
+setVar,shotNum,diffSwitch(9>18>36)
 timeRepeatTimes,2000,1000,6
 pattVarReset
-pattVars,warningDelay;0,spawnDelay;0,showWarning;false,ringNum;1,spd_0;8,num;36,angle;shotAngle,type;1,offset;0,
+pattVars,warningDelay;0,spawnDelay;0,showWarning;false,ringNum;1,spd_0;8,num;shotNum,angle;shotAngle,type;1,offset;0,
 pattAddPos,bp_fire2_blast,enemyX,enemyY
 pattVars,offset;40,
 pattAddPos,bp_fire2_blast,enemyX,enemyY
@@ -25,10 +26,10 @@ pattAddPos,bp_fire2_blast,enemyX,enemyY
 time,1500
 setVar,oRandom,irandom(4)*10-20
 setVar,tDistance,700
-pattVars,spawnDelay;0,eraseDelay;5000,type;0,trgBinary;all,offX;tDistance*cos(oRandom),offY;tDistance*sin(oRandom);
+pattVars,spawnDelay;0,eraseDelay;5000,type;1,trgBinary;all,offX;tDistance*cos(oRandom),offY;tDistance*sin(oRandom);
 pattAdd,bp_teleport_bin
 setVar,oRandom,irandom(4)*10-20
-pattVars,spawnDelay;500,eraseDelay;8000,type;1,trgBinary;all,offX;tDistance*cos(oRandom),offY;tDistance*sin(oRandom);
+pattVars,spawnDelay;500,eraseDelay;8000,type;2,trgBinary;all,offX;tDistance*cos(oRandom),offY;tDistance*sin(oRandom);
 pattAdd,bp_teleport_bin
 ##テレポート end
 

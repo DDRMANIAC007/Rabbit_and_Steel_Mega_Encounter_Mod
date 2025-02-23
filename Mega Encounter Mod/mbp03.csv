@@ -1,7 +1,7 @@
 newPattern,mbp_mouse_cadet
 time,0
 zoom,0.86
-setExpMult,1,1
+pattAdd,mbp_zako_common
 pattVars,delay;0,hbsIndex;hbs(hbs_flutterstep),hbsDuration;999000,hbsStrength;0
 pattAdd,bp_apply_hbs_synced
 move,bfCenterX+600,bfMinY+100,1000,,,
@@ -12,7 +12,9 @@ pattAdd,mbp_mouse_cadet_0m
 
 newPattern,mbp_mouse_medic
 time,0
-setExpMult,1,1
+pattVars,delay;0,hbsIndex;hbs(hbs_flutterstep),hbsDuration;999000,hbsStrength;0
+pattAdd,bp_apply_hbs_synced
+pattAdd,mbp_zako_common
 move,bfCenterX-600,bfMaxY-100,1000,,,
 
 time,1500

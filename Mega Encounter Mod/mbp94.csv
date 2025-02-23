@@ -1,7 +1,10 @@
-newPattern,mbp_bird_archon
+newPattern,mbp_queens_shield
 time,0
-zoom,0.80
+zoom,0.75
 pattAdd,mbp_chu_common
+
+time,500
+setFlags,9
 
 pattVars,delay;0,hbsIndex;hbs(hbs_flutterstep),hbsDuration;999000,hbsStrength;0
 pattAdd,bp_apply_hbs_synced
@@ -9,9 +12,17 @@ pattAdd,bp_apply_hbs_synced
 condDifficultyCheck,false,false,true
 pattVars,delay;0,hbsIndex;hbs(hbs_nodefense),hbsDuration;999000,hbsStrength;0
 pattAdd,bp_apply_hbs_synced
-time,1200
+
+time,1500
 move,bfCenterX,bfCenterY,500
 
 
-timeRepeating,2000,13000
-pattAdd,mbp_bird_archon_0m
+
+
+timeRepeating,2500,20000
+pattAdd,mbp_queens_shield_0m
+
+
+time,24500
+setFlags,8
+

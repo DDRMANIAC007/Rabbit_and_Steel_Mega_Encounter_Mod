@@ -17,6 +17,11 @@ pattAdd,bp_prscircle_follow_enemy
 ####################################################################
 newPattern,mbp_dragon_ruby_1m
 time,0
+
+setVar,eDelay,diffSwitch(7000>7000>5000)
+setVar,sSpeed,diffSwitch(-0.5>-0.5>-0.75)
+setVar,sScale,diffSwitch(0.20>0.30>0.30)
+
 ##pattVars,delay;500,hbsIndex;hbs(hbs_decay),hbsDuration;13000,hbsStrength;0
 ##pattAdd,bp_apply_hbs_synced
 ##pattVars,spawnDelay;500,hbsIndex;hbs(hbs_holyshield),hbsDuration;13000,hbsStrength;10
@@ -29,20 +34,8 @@ pattVars,warningDelay;0,spawnDelay;3000,eraseDelay;999000,scale;1,type;1,numPoin
 pattAdd,bp_dark_targeted
 ## 中心にAOE設置 end
 
-## 囲い start
-## pattVarReset
-## orderBinRandom,2,2
-## pattVars,spawnDelay;0,eraseDelay;4000,orderBin_0;orderBin0,orderBin_1;orderBin1,orderBin_2;0,orderBin_3;0
-## pattAdd,bp_showgroups,
-## pattVarReset
-## pattVars,spawnDelay;3000,trgBinary;orderBin0,element;blue,width;bfHeight*(1/2),height;bfHeight,
-## pattAddPos,bp_fieldlimit_rectangle,bfCenterX,bfCenterY
-## pattVars,trgBinary;orderBin1,element;red,width;bfHeight,height;bfHeight*(1/2),
-## pattAddPos,bp_fieldlimit_rectangle,bfCenterX,bfCenterY
-## 囲い end
-
 ## 無限に回転 start
-pattVars,warningDelay;0,spawnDelay;3000,rot;random(90),num;8,speedMult;-0.5,width;120
+pattVars,warningDelay;0,spawnDelay;3000,rot;random(90),num;8,speedMult;sSpeed,width;100
 pattAddPos,bp_ray_spinning_permanent,enemyX,enemyY
 ## 無限に回転 end
 
@@ -52,7 +45,7 @@ timeRepeating,4000,500
 pattVarReset
 orderBinRandom,1,1,1,1
 pattPositionOrderBin,orderBin0
-pattVars,warningDelay;0,spawnDelay;2000,eraseDelay;7000,scale;0.30,type;0,
+pattVars,warningDelay;0,spawnDelay;2000,eraseDelay;eDelay,scale;sScale,type;0,
 ##pattAdd,bp_dark_targeted
 condVarCheck,allyNum,>=,1
 setVar,targetId,randomTargetId(orderBin0)

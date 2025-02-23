@@ -5,13 +5,14 @@ time,0
 anim,0,2000,9000
 pattVars,warningDelay;0,spawnDelay;2000,radius;200,numPoints;1,posX_0;enemyX,posY_0;enemyY
 pattAdd,bp_circle_position
+setVar,shotNum,diffSwitch(6>18>22)
 
-timeRepeatTimes,2000,1000,7
+timeRepeatTimes,1000,1000,6
 pattVarReset
 pattVars,warningDelay;0,spawnDelay;0,showWarning;false,ringNum;1,spd_0;4,num;22,angle;random(360),type;1,offset;0,
 pattAddPos,bp_fire2_blast,enemyX,enemyY
 
-time,4000
+time,2000
 setVar,randMax,80
 setVar,spaceX,bfWidth/7
 setVar,baseScale,1.14
@@ -77,55 +78,59 @@ pattVars,warningDelay;0,spawnDelay;10500,radius;260,trgBinary;all,warnMsg;1,
 pattAdd,bp_circle_spreads
 
 
-time,4150
+time,2150
 condVarCheck,q,==,0
 setVar,px8,9999
 setVar,px10,9999
+setVar,px13,9999
 setVar,px26,9999
 setVar,px28,9999
 
-time,4300
+time,2300
 condVarCheck,q,==,1
 setVar,px9,9999
 setVar,px18,9999
 setVar,px27,9999
 setVar,px21,9999
+setVar,px24,9999
 
-time,4450
+time,2450
 condVarCheck,q,==,2
 setVar,px16,9999
 setVar,px18,9999
 setVar,px21,9999
+setVar,px26,9999
 setVar,px27,9999
 
-time,4600
+time,2600
 condVarCheck,q,==,3
 setVar,px9,9999
 setVar,px16,9999
 setVar,px23,9999
 setVar,px19,9999
+setVar,px12,9999
 
-time,7000
+time,5000
 setVar,py,bfCenterY-signY*(spaceY*2)
-pattVars,spawnDelay;7000,eraseDelay;8000,scale;baseScale,type;0,numPoints;8,posX_0;px0+random(randMax)-randMax/2,posY_0;py+random(randMax)-randMax/2,posX_1;px1+random(randMax)-randMax/2,posY_1;py+random(randMax)-randMax/2,posX_2;px2+random(randMax)-randMax/2,posY_2;py+random(randMax)-randMax/2,posX_3;px3+random(randMax)-randMax/2,posY_3;py+random(randMax)-randMax/2,posX_4;px4+random(randMax)-randMax/2,posY_4;py+random(randMax)-randMax/2,posX_5;px5+random(randMax)-randMax/2,posY_5;py+random(randMax)-randMax/2,posX_6;px6+random(randMax)-randMax/2,posY_6;py+random(randMax)-randMax/2,posX_7;px7+random(randMax)-randMax/2,posY_7;py+random(randMax)-randMax/2,
+pattVars,spawnDelay;7000,eraseDelay;8300,scale;baseScale,type;0,numPoints;8,posX_0;px0+random(randMax)-randMax/2,posY_0;py+random(randMax)-randMax/2,posX_1;px1+random(randMax)-randMax/2,posY_1;py+random(randMax)-randMax/2,posX_2;px2+random(randMax)-randMax/2,posY_2;py+random(randMax)-randMax/2,posX_3;px3+random(randMax)-randMax/2,posY_3;py+random(randMax)-randMax/2,posX_4;px4+random(randMax)-randMax/2,posY_4;py+random(randMax)-randMax/2,posX_5;px5+random(randMax)-randMax/2,posY_5;py+random(randMax)-randMax/2,posX_6;px6+random(randMax)-randMax/2,posY_6;py+random(randMax)-randMax/2,posX_7;px7+random(randMax)-randMax/2,posY_7;py+random(randMax)-randMax/2,
 pattAdd,bp_delayed_target_circle
 
-time,7250
+time,5250
 setVar,py,bfCenterY-signY*(spaceY*1)
-pattVars,spawnDelay;7000-1*baseTime,eraseDelay;8000-1*baseTime,scale;baseScale,type;0,numPoints;7,posX_0;px8+random(randMax)-randMax/2,posY_0;py+random(randMax)-randMax/2,posX_1;px9+random(randMax)-randMax/2,posY_1;py+random(randMax)-randMax/2,posX_2;px10+random(randMax)-randMax/2,posY_2;py+random(randMax)-randMax/2,posX_3;px11+random(randMax)-randMax/2,posY_3;py+random(randMax)-randMax/2,posX_4;px12+random(randMax)-randMax/2,posY_4;py+random(randMax)-randMax/2,posX_5;px13+random(randMax)-randMax/2,posY_5;py+random(randMax)-randMax/2,posX_6;px14+random(randMax)-randMax/2,posY_6;py+random(randMax)-randMax/2,
+pattVars,spawnDelay;7000-1*baseTime,eraseDelay;8300-1*baseTime,scale;baseScale,type;0,numPoints;7,posX_0;px8+random(randMax)-randMax/2,posY_0;py+random(randMax)-randMax/2,posX_1;px9+random(randMax)-randMax/2,posY_1;py+random(randMax)-randMax/2,posX_2;px10+random(randMax)-randMax/2,posY_2;py+random(randMax)-randMax/2,posX_3;px11+random(randMax)-randMax/2,posY_3;py+random(randMax)-randMax/2,posX_4;px12+random(randMax)-randMax/2,posY_4;py+random(randMax)-randMax/2,posX_5;px13+random(randMax)-randMax/2,posY_5;py+random(randMax)-randMax/2,posX_6;px14+random(randMax)-randMax/2,posY_6;py+random(randMax)-randMax/2,
 pattAdd,bp_delayed_target_circle
 
-time,7500
+time,5500
 setVar,py,bfCenterY
-pattVars,spawnDelay;7000-2*baseTime,eraseDelay;8000-2*baseTime,scale;baseScale,type;0,numPoints;8,posX_0;px15+random(randMax)-randMax/2,posY_0;py+random(randMax)-randMax/2,posX_1;px16+random(randMax)-randMax/2,posY_1;py+random(randMax)-randMax/2,posX_2;px17+random(randMax)-randMax/2,posY_2;py+random(randMax)-randMax/2,posX_3;px18+random(randMax)-randMax/2,posY_3;py+random(randMax)-randMax/2,posX_4;px19+random(randMax)-randMax/2,posY_4;py+random(randMax)-randMax/2,posX_5;px20+random(randMax)-randMax/2,posY_5;py+random(randMax)-randMax/2,posX_6;px21+random(randMax)-randMax/2,posY_6;py+random(randMax)-randMax/2,posX_7;px22+random(randMax)-randMax/2,posY_7;py+random(randMax)-randMax/2,
+pattVars,spawnDelay;7000-2*baseTime,eraseDelay;8300-2*baseTime,scale;baseScale,type;0,numPoints;8,posX_0;px15+random(randMax)-randMax/2,posY_0;py+random(randMax)-randMax/2,posX_1;px16+random(randMax)-randMax/2,posY_1;py+random(randMax)-randMax/2,posX_2;px17+random(randMax)-randMax/2,posY_2;py+random(randMax)-randMax/2,posX_3;px18+random(randMax)-randMax/2,posY_3;py+random(randMax)-randMax/2,posX_4;px19+random(randMax)-randMax/2,posY_4;py+random(randMax)-randMax/2,posX_5;px20+random(randMax)-randMax/2,posY_5;py+random(randMax)-randMax/2,posX_6;px21+random(randMax)-randMax/2,posY_6;py+random(randMax)-randMax/2,posX_7;px22+random(randMax)-randMax/2,posY_7;py+random(randMax)-randMax/2,
 pattAdd,bp_delayed_target_circle
 
-time,7750
+time,5750
 setVar,py,bfCenterY+signY*(spaceY*1)
-pattVars,spawnDelay;7000-3*baseTime,eraseDelay;8000-3*baseTime,scale;baseScale,type;0,numPoints;7,posX_0;px23+random(randMax)-randMax/2,posY_0;py+random(randMax)-randMax/2,posX_1;px24+random(randMax)-randMax/2,posY_1;py+random(randMax)-randMax/2,posX_2;px25+random(randMax)-randMax/2,posY_2;py+random(randMax)-randMax/2,posX_3;px26+random(randMax)-randMax/2,posY_3;py+random(randMax)-randMax/2,posX_4;px27+random(randMax)-randMax/2,posY_4;py+random(randMax)-randMax/2,posX_5;px28+random(randMax)-randMax/2,posY_5;py+random(randMax)-randMax/2,posX_6;px29+random(randMax)-randMax/2,posY_6;py+random(randMax)-randMax/2,
+pattVars,spawnDelay;7000-3*baseTime,eraseDelay;8300-3*baseTime,scale;baseScale,type;0,numPoints;7,posX_0;px23+random(randMax)-randMax/2,posY_0;py+random(randMax)-randMax/2,posX_1;px24+random(randMax)-randMax/2,posY_1;py+random(randMax)-randMax/2,posX_2;px25+random(randMax)-randMax/2,posY_2;py+random(randMax)-randMax/2,posX_3;px26+random(randMax)-randMax/2,posY_3;py+random(randMax)-randMax/2,posX_4;px27+random(randMax)-randMax/2,posY_4;py+random(randMax)-randMax/2,posX_5;px28+random(randMax)-randMax/2,posY_5;py+random(randMax)-randMax/2,posX_6;px29+random(randMax)-randMax/2,posY_6;py+random(randMax)-randMax/2,
 pattAdd,bp_delayed_target_circle
 
-time,8000
+time,6000
 setVar,py,bfCenterY+signY*(spaceY*2)
-pattVars,spawnDelay;7000-4*baseTime,eraseDelay;8000-4*baseTime,scale;baseScale,type;0,numPoints;8,posX_0;px30+random(randMax)-randMax/2,posY_0;py+random(randMax)-randMax/2,posX_1;px31+random(randMax)-randMax/2,posY_1;py+random(randMax)-randMax/2,posX_2;px32+random(randMax)-randMax/2,posY_2;py+random(randMax)-randMax/2,posX_3;px33+random(randMax)-randMax/2,posY_3;py+random(randMax)-randMax/2,posX_4;px34+random(randMax)-randMax/2,posY_4;py+random(randMax)-randMax/2,posX_5;px35+random(randMax)-randMax/2,posY_5;py+random(randMax)-randMax/2,posX_6;px36+random(randMax)-randMax/2,posY_6;py+random(randMax)-randMax/2,posX_7;px37+random(randMax)-randMax/2,posY_7;py+random(randMax)-randMax/2,
+pattVars,spawnDelay;7000-4*baseTime,eraseDelay;8300-4*baseTime,scale;baseScale,type;0,numPoints;8,posX_0;px30+random(randMax)-randMax/2,posY_0;py+random(randMax)-randMax/2,posX_1;px31+random(randMax)-randMax/2,posY_1;py+random(randMax)-randMax/2,posX_2;px32+random(randMax)-randMax/2,posY_2;py+random(randMax)-randMax/2,posX_3;px33+random(randMax)-randMax/2,posY_3;py+random(randMax)-randMax/2,posX_4;px34+random(randMax)-randMax/2,posY_4;py+random(randMax)-randMax/2,posX_5;px35+random(randMax)-randMax/2,posY_5;py+random(randMax)-randMax/2,posX_6;px36+random(randMax)-randMax/2,posY_6;py+random(randMax)-randMax/2,posX_7;px37+random(randMax)-randMax/2,posY_7;py+random(randMax)-randMax/2,
 pattAdd,bp_delayed_target_circle

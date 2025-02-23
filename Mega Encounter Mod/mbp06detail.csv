@@ -22,9 +22,10 @@ pattVars,warningDelay;0,spawnDelay;2000,radius;850,numPoints;1,posX_0;enemyX,pos
 pattAdd,bp_circle_position
 
 setVar,shotAngle,random(360)
+setVar,shotCnt,diffSwitch(50>60>70)
 setVar,i,0
 setVar,blastDelay,2000
-pattVars,warningDelay;0,spawnDelay;blastDelay,showWarning;false,ringNum;1,spd;16,num;70,angle;shotAngle,type;1,offset;100
+pattVars,warningDelay;0,spawnDelay;blastDelay,showWarning;false,ringNum;1,spd;16,num;shotCnt,angle;shotAngle,type;1,offset;100
 pattAddPos,bp_dark2_blast,enemyX,enemyY
 setVar,i,i+1
 pattVars,spawnDelay;blastDelay+i*100
@@ -81,6 +82,7 @@ anim,0,2900,5000
 
 pattVarReset
 ##60~120
+setVar,shotCnt,diffSwitch(20>30>40)
 setVar,flareSeed,random(60)+60
 setVar,flarePosX,bfCenterX+(bfHeight/2)*cos(flareSeed)
 setVar,flarePosY,bfCenterY+(bfHeight/2)*sin(flareSeed)
@@ -96,7 +98,7 @@ pattAdd,bp_circle_spreads
 timeRepeatTimes,3000,1000,9
 pattVarReset
 setVar,shotSpd,4.6
-pattVars,warningDelay;0,spawnDelay;0,showWarning;false,ringNum;1,spd_0;shotSpd,num;40,angle;random(360),type;0
+pattVars,warningDelay;0,spawnDelay;0,showWarning;false,ringNum;1,spd_0;shotSpd,num;shotCnt,angle;random(360),type;0
 pattAddPos,bp_fire2_blast,flarePosX,flarePosY
 pattAddPos,bp_fire2_blast,flarePosXr,flarePosYr
 
@@ -133,9 +135,34 @@ pattAdd,bp_circle_spreads
 pattVarReset
 
 
+setVar,shotCnt,diffSwitch(2>4>6)
 setVar,randomSeedBase,30
 setVar,angleBase,75
 setVar,distanceX,1000
+setVar,padding,bfWidth/8
+setVar,shotX,bfMaxX+padding
+setVar,padding2,(bfWidth/8)/4
+setVar,delayBase,2500
+timeRepeatTimes,500,300,9
+pattVarReset
+setVar,shotIdx,0
+pattVars,warningDelay;0,spawnDelay;delayBase,showWarning;false,ringNum;shotCnt,num;2,angle;angleBase+random(randomSeedBase),type;1
+pattVars,spd_5;13
+pattVars,spd_4;12
+pattVars,spd_3;10
+pattVars,spd_2;8
+pattVars,spd_1;6
+pattVars,spd_0;4
+pattAddPos,bp_fire2_blast,shotX,bfCenterY
+setVar,shotIdx,shotIdx+1
+pattVars,spawnDelay;delayBase+shotIdx*(125/3),angle;angleBase+random(randomSeedBase),
+pattAddPos,bp_fire2_blast,shotX-padding2*shotIdx,bfCenterY
+setVar,shotIdx,shotIdx+1
+pattVars,spawnDelay;delayBase+shotIdx*(125/3),angle;angleBase+random(randomSeedBase),
+pattAddPos,bp_fire2_blast,shotX-padding2*shotIdx,bfCenterY
+setVar,shotX,shotX-padding
+setVar,delayBase,delayBase-175
+
 time,3000
 pattVars,warningDelay;0,spawnDelay;3000,trgBinary;all,radius;300,horizontal;true,warnMsg;2,lifespan;300,kbAmount;300
 pattAddPos,bp_knockback_line,bfCenterX,bfCenterY
@@ -146,26 +173,28 @@ pattAdd,bp_circle_spreads
 pattVarReset
 
 setVar,padding,bfWidth/8
-setVar,shotX,bfMaxX+padding
+setVar,shotX,bfMinX-padding
 setVar,padding2,(bfWidth/8)/4
-timeRepeatTimes,3000,125,9
+setVar,delayBase,2500
+timeRepeatTimes,3500,300,9
 pattVarReset
 setVar,shotIdx,0
-pattVars,warningDelay;0,spawnDelay;0,showWarning;false,ringNum;6,num;2,angle;angleBase+random(randomSeedBase),type;1
-pattVars,spd_0;13
-pattVars,spd_1;12
-pattVars,spd_2;10
-pattVars,spd_3;8
-pattVars,spd_4;6
-pattVars,spd_5;4
+pattVars,warningDelay;0,spawnDelay;delayBase,showWarning;false,ringNum;shotCnt,num;2,angle;angleBase+random(randomSeedBase),type;1
+pattVars,spd_5;13
+pattVars,spd_4;12
+pattVars,spd_3;10
+pattVars,spd_2;8
+pattVars,spd_1;6
+pattVars,spd_0;4
 pattAddPos,bp_fire2_blast,shotX,bfCenterY
 setVar,shotIdx,shotIdx+1
-pattVars,spawnDelay;shotIdx*(125/3),angle;angleBase+random(randomSeedBase),
-pattAddPos,bp_fire2_blast,shotX-padding2*shotIdx,bfCenterY
+pattVars,spawnDelay;delayBase+shotIdx*(125/3),angle;angleBase+random(randomSeedBase),
+pattAddPos,bp_fire2_blast,shotX+padding2*shotIdx,bfCenterY
 setVar,shotIdx,shotIdx+1
-pattVars,spawnDelay;shotIdx*(125/3),angle;angleBase+random(randomSeedBase),
-pattAddPos,bp_fire2_blast,shotX-padding2*shotIdx,bfCenterY
-setVar,shotX,shotX-padding
+pattVars,spawnDelay;delayBase+shotIdx*(125/3),angle;angleBase+random(randomSeedBase),
+pattAddPos,bp_fire2_blast,shotX+padding2*shotIdx,bfCenterY
+setVar,shotX,shotX+padding
+setVar,delayBase,delayBase-175
 
 
 time,6000
@@ -178,26 +207,28 @@ pattAdd,bp_circle_spreads
 pattVarReset
 
 setVar,padding,bfWidth/8
-setVar,shotX,bfMinX-padding
+setVar,shotX,bfMaxX+padding
 setVar,padding2,(bfWidth/8)/4
-timeRepeatTimes,6000,125,9
+setVar,delayBase,2500
+timeRepeatTimes,6500,300,9
 pattVarReset
 setVar,shotIdx,0
-pattVars,warningDelay;0,spawnDelay;0,showWarning;false,ringNum;6,num;2,angle;angleBase+random(randomSeedBase),type;1
-pattVars,spd_0;13
-pattVars,spd_1;12
-pattVars,spd_2;10
-pattVars,spd_3;8
-pattVars,spd_4;6
-pattVars,spd_5;4
+pattVars,warningDelay;0,spawnDelay;delayBase,showWarning;false,ringNum;shotCnt,num;2,angle;angleBase+random(randomSeedBase),type;1
+pattVars,spd_5;13
+pattVars,spd_4;12
+pattVars,spd_3;10
+pattVars,spd_2;8
+pattVars,spd_1;6
+pattVars,spd_0;4
 pattAddPos,bp_fire2_blast,shotX,bfCenterY
 setVar,shotIdx,shotIdx+1
-pattVars,spawnDelay;shotIdx*(125/3),angle;angleBase+random(randomSeedBase),
-pattAddPos,bp_fire2_blast,shotX+padding2*shotIdx,bfCenterY
+pattVars,spawnDelay;delayBase+shotIdx*(125/3),angle;angleBase+random(randomSeedBase),
+pattAddPos,bp_fire2_blast,shotX-padding2*shotIdx,bfCenterY
 setVar,shotIdx,shotIdx+1
-pattVars,spawnDelay;shotIdx*(125/3),angle;angleBase+random(randomSeedBase),
-pattAddPos,bp_fire2_blast,shotX+padding2*shotIdx,bfCenterY
-setVar,shotX,shotX+padding
+pattVars,spawnDelay;delayBase+shotIdx*(125/3),angle;angleBase+random(randomSeedBase),
+pattAddPos,bp_fire2_blast,shotX-padding2*shotIdx,bfCenterY
+setVar,shotX,shotX-padding
+setVar,delayBase,delayBase-175
 
 time,9000
 pattVars,warningDelay;0,spawnDelay;3000,trgBinary;all,radius;300,horizontal;true,warnMsg;2,lifespan;300,kbAmount;300
@@ -209,52 +240,33 @@ pattAdd,bp_circle_spreads
 pattVarReset
 
 setVar,padding,bfWidth/8
-setVar,shotX,bfMaxX+padding
+setVar,shotX,bfMinX-padding
 setVar,padding2,(bfWidth/8)/4
-timeRepeatTimes,9000,125,9
+setVar,delayBase,2500
+timeRepeatTimes,9500,300,9
 pattVarReset
 setVar,shotIdx,0
-pattVars,warningDelay;0,spawnDelay;0,showWarning;false,ringNum;6,num;2,angle;angleBase+random(randomSeedBase),type;1
-pattVars,spd_0;13
-pattVars,spd_1;12
-pattVars,spd_2;10
-pattVars,spd_3;8
-pattVars,spd_4;6
-pattVars,spd_5;4
+pattVars,warningDelay;0,spawnDelay;delayBase,showWarning;false,ringNum;shotCnt,num;2,angle;angleBase+random(randomSeedBase),type;1
+pattVars,spd_5;13
+pattVars,spd_4;12
+pattVars,spd_3;10
+pattVars,spd_2;8
+pattVars,spd_1;6
+pattVars,spd_0;4
 pattAddPos,bp_fire2_blast,shotX,bfCenterY
 setVar,shotIdx,shotIdx+1
-pattVars,spawnDelay;shotIdx*(125/3),angle;angleBase+random(randomSeedBase),
-pattAddPos,bp_fire2_blast,shotX-padding2*shotIdx,bfCenterY
+pattVars,spawnDelay;delayBase+shotIdx*(125/3),angle;angleBase+random(randomSeedBase),
+pattAddPos,bp_fire2_blast,shotX+padding2*shotIdx,bfCenterY
 setVar,shotIdx,shotIdx+1
-pattVars,spawnDelay;shotIdx*(125/3),angle;angleBase+random(randomSeedBase),
-pattAddPos,bp_fire2_blast,shotX-padding2*shotIdx,bfCenterY
-setVar,shotX,shotX-padding
+pattVars,spawnDelay;delayBase+shotIdx*(125/3),angle;angleBase+random(randomSeedBase),
+pattAddPos,bp_fire2_blast,shotX+padding2*shotIdx,bfCenterY
+setVar,shotX,shotX+padding
+setVar,delayBase,delayBase-175
 
 time,12000
 facePoint,bfCenterX
 move,bfMaxX-200,bfCenterY,500
 
-setVar,padding,bfWidth/8
-setVar,shotX,bfMinX-padding
-setVar,padding2,(bfWidth/8)/4
-timeRepeatTimes,12000,125,9
-pattVarReset
-setVar,shotIdx,0
-pattVars,warningDelay;0,spawnDelay;0,showWarning;false,ringNum;6,num;2,angle;angleBase+random(randomSeedBase),type;1
-pattVars,spd_0;13
-pattVars,spd_1;12
-pattVars,spd_2;10
-pattVars,spd_3;8
-pattVars,spd_4;6
-pattVars,spd_5;4
-pattAddPos,bp_fire2_blast,shotX,bfCenterY
-setVar,shotIdx,shotIdx+1
-pattVars,spawnDelay;shotIdx*(125/3),angle;angleBase+random(randomSeedBase),
-pattAddPos,bp_fire2_blast,shotX+padding2*shotIdx,bfCenterY
-setVar,shotIdx,shotIdx+1
-pattVars,spawnDelay;shotIdx*(125/3),angle;angleBase+random(randomSeedBase),
-pattAddPos,bp_fire2_blast,shotX+padding2*shotIdx,bfCenterY
-setVar,shotX,shotX+padding
 
 time,13000
 facePoint,bfCenterX
@@ -272,17 +284,20 @@ pattAdd,mbp_dragon_mythril_m32
 
 timeRepeating,2000,11000
 pattAdd,mbp_dragon_mythril_m33
+condHpThreshold,0.01
+endPattern
+
 
 
 ####################################################################
 ####################################################################
 newPattern,mbp_dragon_mythril_m31
 time,0
-pattVars,spawnDelay;0,trgBinary;all,element;red,width;bfWidth*(1/2),height;bfHeight,
+pattVars,spawnDelay;0,trgBinary;all,element;red,width;bfWidth*(3/5),height;bfHeight,
 pattAddPos,bp_fieldlimit_rectangle,bfCenterX,bfCenterY
 pattVarReset
 
-pattVars,warningDelay;0,spawnDelay;2000,eraseDelay;999000,scale;1.5,type;1,numPoints;1,posX_0;enemyX,posY_0;enemyY
+pattVars,warningDelay;0,spawnDelay;2000,eraseDelay;4000,scale;1.5,type;1,numPoints;1,posX_0;enemyX,posY_0;enemyY
 pattAdd,bp_dark_targeted
 pattVarReset
 
@@ -314,26 +329,111 @@ pattVars,dir;moonAngle-120
 pattAddPos,bp_dark_moon_summon,enemyX,enemyY
 
 setVar,moonScale,moonScale+0.01
+condHpThreshold,0.01
+pattAdd,mbp_dragon_mythril_m90
+endPattern
+
 
 ####################################################################
 ####################################################################
 newPattern,mbp_dragon_mythril_m33
 time,0
-## 螺旋弾幕 start
+setVar,shotCnt,diffSwitch(2>3>4)
 setVar,shotAngle,random(360)
 setVar,distance,700
 setVar,sign,randomSign
-timeRepeatTimes,0,125,80
+## 螺旋弾幕 start
+timeRepeatTimes,50,125,80
 pattVarReset
-pattVars,spawnDelay;0,type;0,offset;0,num;3,spd;3+random(0.5),angle;shotAngle+random(5),
+pattVars,spawnDelay;0,type;0,offset;0,num;shotCnt,spd;3+random(0.4),angle;shotAngle+random(5),
 pattAddPos,bp_dark2_blast,enemyX,enemyY
-pattVars,spawnDelay;100,angle;shotAngle+5+random(5),spd;3+random(0.5)
+pattVars,spawnDelay;100,angle;shotAngle+7+random(5),spd;3+random(0.5)
 pattAddPos,bp_dark2_blast,enemyX,enemyY
-pattVars,spawnDelay;200,angle;shotAngle+10+random(5),spd;3+random(0.5)
-pattAddPos,bp_dark2_blast,enemyX,enemyY
-setVar,shotAngle,shotAngle+(15*sign)
+setVar,shotAngle,shotAngle+(14*sign)
+condHpThreshold,0.01
+endPattern
 ## 螺旋弾幕 end
 
+####################################################################
+####################################################################
+newPattern,mbp_dragon_mythril_m90
+time,5000
+pattAdd,mbp_last_spell
+pattVars,warningDelay;0,spawnDelay;4000,y;bfCenterY,width;bfHeight*(3/4),offset;0,spd;10,doubled;2,displayNumber;0,element;blue,warnMsg;1
+pattAdd,bp_prsline_h
+
+time,7000
+move,bfCenterX,bfMinY-1000,1500
+pattVars,mult;1.4
+pattAddPos,bp_gravity_pull,bfCenterX,bfMinY
+##pattVars,warningDelay;0,spawnDelay;2000,eraseDelay;62000,scale;4,type;1,numPoints;1,posX_0;bfCenterX,posY_0;bfMinY
+##pattAdd,bp_dark_targeted
+pattAdd,mbp_dragon_mythril_m93
+pattVarReset
+
+time,9000
+pattAdd,mbp_dragon_mythril_m91
+pattAdd,mbp_dragon_mythril_m92
+
+time,70000
+move,bfCenterX,bfCenterY,1500
+
+####################################################################
+####################################################################
+newPattern,mbp_dragon_mythril_m91
+timeRepeatTimes,0,1000,8
+pattVars,spawnDelay;0,type;0,offset;0,num;30,spd;3.5,angle;random(360),
+pattAddPos,bp_dark2_blast,bfCenterX,bfMinY
+
+timeRepeatTimes,8000,800,20
+pattVars,spawnDelay;0,type;0,offset;0,num;34,spd;3.5,angle;random(360),
+pattAddPos,bp_dark2_blast,bfCenterX,bfMinY
+
+timeRepeatTimes,24000,700,30
+pattVars,spawnDelay;0,type;0,offset;0,num;38,spd;3.5,angle;random(360),
+pattAddPos,bp_dark2_blast,bfCenterX,bfMinY
+
+timeRepeatTimes,45000,600,24
+pattVars,spawnDelay;0,type;0,offset;0,num;40,spd;3.5,angle;random(360),
+pattAddPos,bp_dark2_blast,bfCenterX,bfMinY
+
+####################################################################
+####################################################################
+newPattern,mbp_dragon_mythril_m92
+time,0
+setVar,startAngle,90
+setVar,baseDst,bfHeight+300
+setVar,spaceAngle,12
+setVar,cross,-1
+setVar,rAngle,startAngle-spaceAngle/2+(cross*spaceAngle/4)
+setVar,lAngle,startAngle+spaceAngle/2+(cross*spaceAngle/4)
+timeRepeatTimes,0,200,299
+setVar,rAngle,rAngle+spaceAngle
+setVar,lAngle,lAngle-spaceAngle
+pattVars,refFromX;bfCenterX+baseDst*cos(rAngle),refFromY;bfMinY+baseDst*sin(rAngle),refPointPx;bfCenterX,refPointPy;bfMinY
+pattAdd,create_bullet_to_point
+pattVars,refFromX;bfCenterX+baseDst*cos(lAngle),refFromY;bfMinY+baseDst*sin(lAngle)
+pattAdd,create_bullet_to_point
+condVarCheck,rAngle,>=,150
+setVar,rAngle,startAngle-spaceAngle/2+(cross*spaceAngle/4)
+setVar,lAngle,startAngle+spaceAngle/2+(cross*spaceAngle/4)
+setVar,cross,cross*(-1)
 
 
 
+####################################################################
+####################################################################
+newPattern,create_bullet_to_point
+time,0
+setVar,tox,refPointPx
+setVar,toy,refPointPy
+setVar,shotAngle,pointFrom(refFromX>refFromY>tox>toy)
+pattVars,spawnDelay;0,type;1,offset;0,num;1,spd;2,angle;shotAngle,
+pattAddPos,bp_dark2_blast,refFromX,refFromY
+
+####################################################################
+####################################################################
+newPattern,mbp_dragon_mythril_m93
+timeRepeatTimes,0,5000,12
+pattVars,warningDelay;0,spawnDelay;3000,warningDelay2;2500,radius;300,fanAngle;9,trgBinary;all,warnMsg;2,displayNumber;0
+pattAddPos,bp_clockspot,bfCenterX,bfMinY

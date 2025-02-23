@@ -3,8 +3,10 @@
 newPattern,mbp_bird_student_0m
 time,0
 anim,0,2000,18000
+setVar,dShotCnt,diffSwitch(8>16>18)
+setVar,dShotType,diffSwitch(1>1>0)
 
-pattVars,warningDelay;0,spawnDelay;3000,radius;400,numPoints;1,posX_0;enemyX,posY_0;enemyY
+pattVars,warningDelay;0,spawnDelay;3000,radius;400,numPoints;2,posX_0;enemyX+400,posY_0;enemyY,posX_1;enemyX,posY_1;enemyY
 pattAdd,bp_circle_position
 
 pattVars,warningDelay;0,spawnDelay;3000,radius;300,angle;0,number;30,spd;14,doubled;false,warnMsg;1,element;red
@@ -29,13 +31,13 @@ pattVars,spawnDelay;1500,eraseDelay;20000,type;3,trgBinary;all,offX;0,offY;(base
 pattAdd,bp_teleport_bin
 
 timeRepeatTimes,3000,1500,12
-pattVars,warningDelay;0,spawnDelay;0,showWarning;false,ringNum;1,spd_0;5,num;20,angle;random(360),type;1,offset;0,
+pattVars,warningDelay;0,spawnDelay;0,showWarning;false,ringNum;1,spd_0;5,num;dShotCnt,angle;random(360),type;dShotType,offset;0,
 pattAddPos,bp_fire2_blast,enemyX,enemyY
 
 timeRepeatTimes,3500,150,130
 pattVarReset
 setVar,px,playerXPos(targetP)
 setVar,py,playerYPos(targetP)
-setVar,aimAngle,pointFrom(enemyX>enemyY>px>py)
+setVar,aimAngle,pointFrom(enemyX+400>enemyY>px>py)
 pattVars,warningDelay;150,spawnDelay;150,showWarning;false,ringNum;3,spd_0;7,spd_1;8,spd_2;6,num;4,angle;aimAngle,type;0,offset;0,
-pattAddPos,bp_fire2_blast,enemyX,enemyY
+pattAddPos,bp_fire2_blast,enemyX+400,enemyY

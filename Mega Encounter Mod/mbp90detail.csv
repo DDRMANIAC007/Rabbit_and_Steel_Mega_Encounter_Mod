@@ -4,19 +4,11 @@ newPattern,mbp_queens_staff_0m
 time,0
 setVar,sign,randomSign
 setVar,aRand,random(360)
+setVar,shotNum,diffSwitch(12>17>20)
 time,500
-pattVars,warningDelay;0,spawnDelay;2000,eraseDelay;2500,radius;300,num;20,rot;aRand,speedMult;sign*0.5,width;25,shouldMove;false,
+pattVars,warningDelay;0,spawnDelay;2000,eraseDelay;2500,radius;300,num;shotNum,rot;aRand,speedMult;sign*0.5,width;40,shouldMove;false,
 pattAddPos,bp_ray_spinning,enemyX,enemyY
 
 time,1500
-pattVars,warningDelay;0,spawnDelay;2000,eraseDelay;2500,radius;300,num;20,rot;aRand,speedMult;sign*(-0.5),width;25,shouldMove;false,
+pattVars,warningDelay;0,spawnDelay;2000,eraseDelay;2500,radius;300,num;shotNum,rot;aRand,speedMult;sign*(-0.5),width;40,shouldMove;false,
 pattAddPos,bp_ray_spinning,enemyX,enemyY
-
-##time,2500
-##orderBinRandom,1,1,1,1
-##setVar,targetId,randomTargetId(orderBin0)
-##setVar,targetX,playerXPos(targetId)
-##setVar,targetY,playerYPos(targetId)
-##setVar,targetAngle,pointFrom(enemyX>enemyY>targetX>targetY)
-##pattVars,warningDelay;0,spawnDelay;0,showWarning;0,ringNum;1,spd_0;3,num;1,angle;targetAngle,type;0
-##pattAddPos,bp_fire2_blast,enemyX,enemyY

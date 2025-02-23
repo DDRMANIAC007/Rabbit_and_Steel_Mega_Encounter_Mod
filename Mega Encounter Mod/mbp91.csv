@@ -1,12 +1,12 @@
 newPattern,mbp_queens_axe
 time,0
-setFlags,8
 zoom,0.80
-setExpMult,1,1
+pattAdd,mbp_chu_common
+
 pattVars,delay;0,hbsIndex;hbs(hbs_flutterstep),hbsDuration;999000,hbsStrength;0
 pattAdd,bp_apply_hbs_synced
 time,1500
-move,bfCenterX,bfCenterY,500
+move,bfMinX+(bfWidth*4)/5,bfCenterY,500
 
-timeRepeating,2200,5000
-pattAdd,mbp_queens_axe_0m
+time,2200
+pattAdd,mbp_queens_axe_0m2v
