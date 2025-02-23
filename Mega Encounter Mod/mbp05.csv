@@ -1,7 +1,8 @@
 newPattern,mbp_dragon_emerald
 time,0
 zoom,0.70
-setExpMult,1,1
+pattAdd,mbp_zako_common
+
 pattVars,delay;0,hbsIndex;hbs(hbs_flutterstep),hbsDuration;999000,hbsStrength;0
 pattAdd,bp_apply_hbs_synced
 
@@ -11,3 +12,18 @@ pattAdd,mbp_dragon_emerald_0m
 
 timeRepeating,2000,7500
 pattAdd,mbp_dragon_emerald_1m
+
+newPattern,mbp_dragon_emerald_d
+time,0
+zoom,0.70
+pattAdd,mbp_zako_common
+
+pattVars,delay;0,hbsIndex;hbs(hbs_flutterstep),hbsDuration;999000,hbsStrength;0
+pattAdd,bp_apply_hbs_synced
+
+move,bfCenterX,bfCenterY,900,
+time,1000
+pattAdd,mbp_dragon_emerald_0md
+
+timeRepeating,2000,8000
+pattAdd,mbp_dragon_emerald_1md

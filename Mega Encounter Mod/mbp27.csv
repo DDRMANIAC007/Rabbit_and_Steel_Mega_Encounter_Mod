@@ -1,0 +1,14 @@
+newPattern,mbp_frog_tinkerer
+time,0
+zoom,0.80
+pattAdd,mbp_zako_common
+
+pattVars,delay;0,hbsIndex;hbs(hbs_flutterstep),hbsDuration;999000,hbsStrength;0
+pattAdd,bp_apply_hbs_synced
+
+time,1000
+pattVars,warningDelay;0,warningDelay2;0,spawnDelay;2500,element;blue,radius;500,trgBinary;all,warnMsg;1,displayNumber;0
+pattAddPos,bp_colormatch2,bfCenterX-400,bfCenterY
+
+timeRepeating,3800,5000
+pattAdd,mbp_frog_tinkerer_0m

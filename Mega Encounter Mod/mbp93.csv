@@ -1,0 +1,15 @@
+newPattern,mbp_queens_spear
+time,0
+zoom,0.80
+pattAdd,mbp_zako_common
+
+pattVars,delay;0,hbsIndex;hbs(hbs_flutterstep),hbsDuration;999000,hbsStrength;0
+pattAdd,bp_apply_hbs_synced
+time,1500
+move,bfCenterX,bfCenterY,500
+
+
+time,2200
+pattVars,warningDelay;0,spawnDelay;8000,x;bfCenterX-300,width;900,offset;0,spd;10,doubled;2,displayNumber;0,element;blue,warnMsg;1
+pattAdd,bp_prsline_v
+pattAdd,mbp_queens_spear_0m

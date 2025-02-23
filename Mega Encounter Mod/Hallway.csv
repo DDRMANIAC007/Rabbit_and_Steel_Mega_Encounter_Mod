@@ -1,11 +1,11 @@
 lineType,key
 ,
 hallway,hw_outskirts
-battle,en_bird_sophomore
-loot,
 battle,en_mouse_cadet
 loot,
-battle,en_dragon_granite
+battle,en_wolf_blackear;en_bird_sophomore
+loot,
+battle,en_dragon_granite;en_frog_tinkerer
 ,
 hallway,hw_nest
 shop,
@@ -67,7 +67,7 @@ bossbattle,en_frog_idol
 ,
 hallway,hw_keep
 shop,
-battle,en_queens_axe
+battle,en_queens_spear
 battle,enc_darkGhost
 loot,
 battle,en_queens_staff
@@ -77,6 +77,7 @@ battle,en_queens_harp
 battle,enc_windGhost
 loot,
 battle,enc_lightGhost
+battle,en_queens_axe
 battle,enc_fireGhost
 loot,
 ,

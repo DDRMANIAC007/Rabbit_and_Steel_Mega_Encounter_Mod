@@ -1,23 +1,31 @@
 newPattern,mbp_wolf_snowfur
 time,0
+zoom,0.77
+pattAdd,mbp_chu_common
 setFlags,8
-zoom,0.85
-setExpMult,3,1.2
+
 pattVars,delay;0,hbsIndex;hbs(hbs_flutterstep),hbsDuration;999000,hbsStrength;0
 pattAdd,bp_apply_hbs_synced
 
-time,1500
-##pattVars,warningDelay;0,spawnDelay;1500,showWarning;2,ringNum;8,spd_0;10,spd_1;9,spd_2;8,spd_3;7,spd_4;6,spd_5;5,spd_6;4,spd_7;3,num;6,angle;0,type;1
-pattVars,warningDelay;0,spawnDelay;1500,showWarning;2,ringNum;10,spd_0;10,spd_1;9,spd_2;8,spd_3;7,spd_4;6,spd_5;5,spd_6;4,spd_7;3,spd_8;11,spd_9;12,num;6,angle;0,type;1
-pattAddPos,bp_fire2_blast,bfMaxX-300,bfCenterY
-pattVars,warningDelay;0,spawnDelay;1500,showWarning;2,ringNum;6,spd_0;9,spd_1;8,spd_2;7,spd_3;6,spd_4;5,spd_5;4,num;6,angle;30,type;1,offset;50
-pattAddPos,bp_fire2_blast,bfMaxX-300,bfCenterY
 
-time,2000
-move,bfMaxX-300,bfCenterY,900
+timeRepeating,2000,10000
+pattAdd,mbp_wolf_snowfur_0m2v
 
-time,3000
-anim,0,100,900
 
-timeRepeating,4000,1500
-pattAdd,mbp_wolf_snowfur_0m
+
+
+
+
+
+
+####################################################################
+####################################################################
+newPattern,mbp_wolf_clone
+time,0
+setFlags,5
+
+time,1000
+move,bfMinX,bfMaxY+800,250
+
+timeRepeating,2000,10000
+pattAdd,mbp_wolf_clone_0m2v

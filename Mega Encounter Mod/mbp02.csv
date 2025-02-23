@@ -1,7 +1,7 @@
 newPattern,mbp_dragon_granite
 time,0
 zoom,0.7
-setExpMult,1,1
+pattAdd,mbp_zako_common
 pattVars,delay;0,hbsIndex;hbs(hbs_flutterstep),hbsDuration;999000,hbsStrength;0
 pattAdd,bp_apply_hbs_synced
 

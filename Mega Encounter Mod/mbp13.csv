@@ -1,40 +1,30 @@
 newPattern,mbp_wolf_bluepaw
 time,0
-zoom,0.85
-setExpMult,1,1
+zoom,0.75
+pattAdd,mbp_zako_common
 pattVars,delay;0,hbsIndex;hbs(hbs_flutterstep),hbsDuration;999000,hbsStrength;0
 pattAdd,bp_apply_hbs_synced
-
-
 transformSmall,anim_wolf_small_blue,300,0.8,2,2
 
-
 time,2000
-pattAdd,mbp_wolf_bluepaw_0m
-pattVars,warningDelay;0,spawnDelay;2000,eraseDelay;999000,width;500,angle;0
-pattAddPos,bp_ray_single,bfMinX-300,bfMinY
-pattAddPos,bp_ray_single,bfMinX-300,bfMaxY
+move,bfCenterX+200,bfCenterY,500
 
-timeRepeating,2500,6000
-pattAdd,mbp_wolf_bluepaw_1m
+time,2800
+facePoint,bfMaxX
+pattAdd,mbp_wolf_bluepaw_0m2v
 
 
 newPattern,mbp_wolf_redclaw
 time,0
-zoom,0.85
-setExpMult,1,1
+pattAdd,mbp_zako_common
+
 pattVars,delay;0,hbsIndex;hbs(hbs_flutterstep),hbsDuration;999000,hbsStrength;0
 pattAdd,bp_apply_hbs_synced
-
-
 transformSmall,anim_wolf_small_red,300,0.8,2,2
 
+time,2000
+move,bfCenterX-200,bfCenterY,500
 
-time,2600
-move,bfMinX+400,bfCenterY,1000
-
-time,4000
-facePoint,bfCenterX
-
-timeRepeating,5500,5000
-pattAdd,mbp_wolf_redclaw_0m
+time,2800
+facePoint,bfMinX
+pattAdd,mbp_wolf_redclaw_0m2v
