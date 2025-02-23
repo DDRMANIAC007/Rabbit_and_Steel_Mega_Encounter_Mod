@@ -1,7 +1,8 @@
 newPattern,mbp_frog_painter
 time,0
 zoom,0.70
-setExpMult,3,1.2
+pattAdd,mbp_chu_common
+
 pattVars,delay;0,hbsIndex;hbs(hbs_flutterstep),hbsDuration;999000,hbsStrength;0
 pattAdd,bp_apply_hbs_synced
 

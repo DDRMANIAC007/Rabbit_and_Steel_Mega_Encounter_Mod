@@ -7,6 +7,7 @@ setVar,downBase,bfMinY+5*(bfHeight/6)
 setVar,baseSpd,4
 setVar,space,40
 setVar,timeSpace,150
+setVar,spaceCnt,diffSwitch(9>6>4)
 
 setVar,idx,0
 setVar,cnt,0
@@ -22,8 +23,8 @@ pattAddPos,bp_dark2_line,fireX,upBase
 pattVars,angle;-90,num;8
 pattAddPos,bp_dark2_line,fireX,downBase
 condVarCheck,idx,>=,7
-setVar,idx,-5
-setVar,fireX,fireX-5*space
+setVar,idx,-spaceCnt
+setVar,fireX,fireX-spaceCnt*space
 condVarCheck,fireX,<=,bfMinX-bfWidth
 setVar,fireX,fireX+bfWidth
 

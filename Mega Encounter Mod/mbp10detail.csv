@@ -13,10 +13,6 @@ pattAddPos,bp_colormatch2,bfCenterX,bfCenterY
 ####################################################################
 newPattern,mbp_frog_painter_1m
 time,0
-
-
-
-orderBinRandom,1,3
 setVar,targetP,randomTargetId(orderBin0)
 setVar,shotFromX,bfMinX
 setVar,shotFromY,bfMinY
@@ -24,7 +20,8 @@ setVar,shotFromXm,bfMaxX
 setVar,shotFromYm,bfMaxY
 setVar,xPadding,bfWidth/12
 setVar,yPadding,bfHeight/6
-
+condDifficultyCheck,false,false,true
+orderBinRandom,1,3
 pattVars,warningDelay;0,spawnDelay;2000,eraseDelay;14000,trgBinary;orderBin1,radius;400,
 pattAdd,bp_tether
 

@@ -1,15 +1,14 @@
 newPattern,mbp_rabbit_queen
 time,0
-zoom,0.80
-setExpMult,6,1.5
+zoom,0.70
+pattAdd,mbp_boss_common
 
 time,1000
 transform,anim_rabbit_queen_big,800,0.8,4,2
-setFlags,2
 
 
 time,9000
 pattVars,delay;0,hbsIndex;hbs(hbs_flutterstep),hbsDuration;999000,hbsStrength;0
 pattAdd,bp_apply_hbs_synced
-pattAdd,mbp_rabbit_queen_00m
+pattAdd,mbp_rabbit_queen_00m2v
 
