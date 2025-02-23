@@ -39,9 +39,15 @@ pattAdd,mbp_test4m
 
 newPattern,mbp_test5
 time,0
-zoom,0.8
+zoom,0.70
 setExpMult,1,1
 
-time,1000
+time,2000
+pattAdd,mbp_boss_common
+pattVars,refLimitColor;0
+pattAdd,mbp_limit_common
+
+time,3000
 dialog,1000,test
-pattAdd,mbp_test5m
+##テスト対象ここから
+pattAdd,mbp_bird_valedictorian_10m

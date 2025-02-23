@@ -25,11 +25,12 @@ time,100
 anim,0,900,2000
 
 time,1000
-pattVars,warningDelay;0,spawnDelay;0,showWarning;0,type;2,lineAngle;90,lineLength;bfHeight+100,angle;-180,num;15,spdMin;12,spdMax;17,rand;random(10000),
+setVar,shotCnt,diffSwitch(8>12>15)
+pattVars,warningDelay;0,spawnDelay;0,showWarning;0,type;2,lineAngle;90,lineLength;bfHeight+100,angle;-180,num;shotCnt,spdMin;12,spdMax;17,rand;random(10000),
 pattAddPos,bp_dark2_line_randomized,bfMaxX+150,bfMinY-50-random(30)
-pattVars,warningDelay;500,spawnDelay;500,num;15,spdMin;12,spdMax;17,rand;random(10000),
+pattVars,warningDelay;500,spawnDelay;500,num;shotCnt,spdMin;12,spdMax;17,rand;random(10000),
 pattAddPos,bp_dark2_line_randomized,bfMaxX+150,bfMinY-random(30)
-pattVars,warningDelay;1000,spawnDelay;1000,num;15,spdMin;12,spdMax;17,rand;random(10000),
+pattVars,warningDelay;1000,spawnDelay;1000,num;shotCnt,spdMin;12,spdMax;17,rand;random(10000),
 pattAddPos,bp_dark2_line_randomized,bfMaxX+150,bfMinY-50-random(30)
 
 
@@ -40,10 +41,8 @@ time,0
 
 
 move,bfCenterX,bfCenterY,1000
-timeRepeating,1000,7000
+timeRepeating,100,7000
 pattAdd,mbp_mouse_paladin_11m
-condHpThreshold,0.60
-endPattern
 
 ####################################################################
 ####################################################################
@@ -54,9 +53,8 @@ pattAdd,mbp_mouse_paladin_20m
 endPattern
 
 time,1000
-anim,0,2000,4000
 pattVarReset
-pattVars,warningDelay;0,spawnDelay;4000,radius;400,trgBinary;all,warnMsg;1,
+pattVars,warningDelay;4000,spawnDelay;8000,radius;400,trgBinary;all,warnMsg;1,
 pattAdd,bp_circle_spreads
 
 pattVarReset
@@ -80,7 +78,7 @@ setVar,aimAngle,aimAngle+60
 setVar,x6,bfCenterX+razerDst*cos(aimAngle)
 setVar,y6,bfCenterY+razerDst*sin(aimAngle)
 
-pattVars,warningDelay;0,spawnDelay;2000,timeBetween;2000,scale;1,numPoints;2,posX_0;bfCenterX,posY_0;bfCenterY,posX_1;x1,posY_1;y1,
+pattVars,warningDelay;4000,spawnDelay;6000,timeBetween;2000,scale;1,numPoints;2,posX_0;bfCenterX,posY_0;bfCenterY,posX_1;x1,posY_1;y1,
 pattAdd,bp_marching_bullet
 pattVars,posX_1;x2,posY_1;y2,
 pattAdd,bp_marching_bullet
@@ -95,61 +93,56 @@ pattAdd,bp_marching_bullet
 
 setVar,timesIdx,0
 setVar,myAngle,random(360)
-setVar,spaceD,razerDst/20
+setVar,spaceD,razerDst/21
 setVar,myDst,-spaceD
 setVar,myDstEx,spaceD/2
-timeRepeatTimes,3000,140,15
+setVar,baseDelay,5775
+setVar,bulletNum,diffSwitch(2>3>4)
+
+timeRepeatTimes,1500,400,17
+setVar,baseDelay,baseDelay-275
 setVar,myDst,myDst+spaceD
 setVar,timesIdx,timesIdx+1
 setVar,aimAngle,0
 setVar,myAngle,myAngle+18
 setVar,myAngleEx,myAngle+9
-pattVars,warningDelay;140,spawnDelay;140,showWarning;0,ringNum;1,spd_0;4,num;2,angle;myAngle,type;1,offset;0
+pattVars,warningDelay;baseDelay,spawnDelay;baseDelay,showWarning;0,ringNum;1,spd_0;3.5,num;bulletNum,angle;myAngle,type;1,offset;0
 pattAddPos,bp_fire2_blast,bfCenterX+myDst*cos(aimAngle),bfCenterY+myDst*sin(aimAngle)
-pattVars,angle;myAngleEx,spawnDelay;210
-pattAddPos,bp_fire2_blast,bfCenterX+(myDstEx+myDst)*cos(aimAngle),bfCenterY+(myDstEx+myDst)*sin(aimAngle)
 setVar,aimAngle,180
-pattVars,angle;myAngle,spawnDelay;140
+pattVars,angle;myAngle,spawnDelay;baseDelay
 pattAddPos,bp_fire2_blast,bfCenterX+myDst*cos(aimAngle),bfCenterY+myDst*sin(aimAngle)
-pattVars,angle;myAngleEx,spawnDelay;210
-pattAddPos,bp_fire2_blast,bfCenterX+(myDstEx+myDst)*cos(aimAngle),bfCenterY+(myDstEx+myDst)*sin(aimAngle)
 
 condVarCheck,timesIdx,<,12
 setVar,aimAngle,60
-pattVars,angle;myAngle,spawnDelay;140
+pattVars,angle;myAngle,spawnDelay;baseDelay,num;bulletNum-1
 pattAddPos,bp_fire2_blast,bfCenterX+myDst*cos(aimAngle),bfCenterY+myDst*sin(aimAngle)
-pattVars,angle;myAngleEx,spawnDelay;210
-pattAddPos,bp_fire2_blast,bfCenterX+(myDstEx+myDst)*cos(aimAngle),bfCenterY+(myDstEx+myDst)*sin(aimAngle)
 setVar,aimAngle,120
-pattVars,angle;myAngle,spawnDelay;140
+pattVars,angle;myAngle,spawnDelay;baseDelay
 pattAddPos,bp_fire2_blast,bfCenterX+myDst*cos(aimAngle),bfCenterY+myDst*sin(aimAngle)
-pattVars,angle;myAngleEx,spawnDelay;210
-pattAddPos,bp_fire2_blast,bfCenterX+(myDstEx+myDst)*cos(aimAngle),bfCenterY+(myDstEx+myDst)*sin(aimAngle)
 setVar,aimAngle,240
-pattVars,angle;myAngle,spawnDelay;140
+pattVars,angle;myAngle,spawnDelay;baseDelay
 pattAddPos,bp_fire2_blast,bfCenterX+myDst*cos(aimAngle),bfCenterY+myDst*sin(aimAngle)
-pattVars,angle;myAngleEx,spawnDelay;210
-pattAddPos,bp_fire2_blast,bfCenterX+(myDstEx+myDst)*cos(aimAngle),bfCenterY+(myDstEx+myDst)*sin(aimAngle)
 setVar,aimAngle,300
-pattVars,angle;myAngle,spawnDelay;140
+pattVars,angle;myAngle,spawnDelay;baseDelay
 pattAddPos,bp_fire2_blast,bfCenterX+myDst*cos(aimAngle),bfCenterY+myDst*sin(aimAngle)
-pattVars,angle;myAngleEx,spawnDelay;210
-pattAddPos,bp_fire2_blast,bfCenterX+(myDstEx+myDst)*cos(aimAngle),bfCenterY+(myDstEx+myDst)*sin(aimAngle)
 
+time,4000
+anim,0,3000,5500
 
 ####################################################################
 ####################################################################
 newPattern,mbp_mouse_paladin_20m
 time,0
+erasePatterns
 
-
+time,2000
 move,bfCenterX,bfCenterY,500
 
 
-time,3000
+time,5000
 pattAdd,mbp_mouse_paladin_21m
 
-timeRepeating,7500,1800
+timeRepeating,9500,1700
 pattAdd,mbp_mouse_paladin_22m
 condHpThreshold,0.30
 endPattern
@@ -159,10 +152,11 @@ endPattern
 ####################################################################
 newPattern,mbp_mouse_paladin_21m
 time,0
+setVar,thLen,diffSwitch(bfHeight-300>bfHeight-150>bfHeight)
 anim,0,4000,4800
 pattVarReset
 orderBinRandom,2,2
-pattVars,warningDelay;0,spawnDelay;4500,radius;700,warnMsg;2,orderBin_0;orderBin0,orderBin_1;orderBin1
+pattVars,warningDelay;0,spawnDelay;4500,radius;thLen,warnMsg;2,orderBin_0;orderBin0,orderBin_1;orderBin1
 pattAdd,bp_thorns_bin
 pattVars,warningDelay;0,spawnDelay;4500,width;100,trgBinary;all,warnMsg;1
 pattAdd,bp_line_spreads_h
@@ -174,7 +168,7 @@ timeRepeating,5000,6000
 anim,0,2000,3700
 pattVarReset
 setVar,spaceY,bfHeight/6
-pattVars,warningDelay;0,spawnDelay;2000,eraseDelay;3500,width;100,angle;0
+pattVars,warningDelay;0,spawnDelay;2000,eraseDelay;3200,width;100,angle;0
 pattAddPos,bp_ray_single,bfMinX-100,bfMinY+spaceY*0
 pattAddPos,bp_ray_single,bfMinX-100,bfMinY+spaceY*6
 pattVars,warningDelay;400,spawnDelay;2400,eraseDelay;3900
@@ -188,38 +182,50 @@ pattAddPos,bp_ray_single,bfMinX-100,bfMinY+spaceY*3
 
 pattVars,warningDelay;0,spawnDelay;3600,width;100,trgBinary;all,warnMsg;1
 pattAdd,bp_line_spreads_h
-pattVars,warningDelay;0,spawnDelay;3600,radius;700,warnMsg;2,orderBin_0;orderBin0,orderBin_1;orderBin1
+pattVars,warningDelay;0,spawnDelay;3600,radius;thLen,warnMsg;2,orderBin_0;orderBin0,orderBin_1;orderBin1
 pattAdd,bp_thorns_bin
 
 condHpThreshold,0.30
 pattAdd,mbp_mouse_paladin_30m
 endPattern
+####################################################################
+####################################################################
+newPattern,mbp_mouse_paladin_22ml
+time,0
+condDifficultyCheck,false,false,true
+pattVars,warningDelay;0,spawnDelay;0,showWarning;false,angle;random(360),num;12,ringNum;3,type;1,offset;0
+pattVars,spd_0;5.0
+pattVars,spd_1;5.5
+pattVars,spd_2;6.0
+pattAddPos,bp_fire2_blast,bfCenterX,bfCenterY
 
 ####################################################################
 ####################################################################
 newPattern,mbp_mouse_paladin_22m
 
 time,0
-setVar,idx,-1
-setVar,cnt,0
-setVar,baseDist,70
-setVar,startY,bfCenterY+random(400)-200
-setVar,lr,100
+setVar,cnt,irandom(6)
+setVar,baseDist,60
+setVar,baseDist2,80
+setVar,startYMin,bfMinY-random(200)
+setVar,startYMax,bfMaxY+random(200)
 anim,0,100,1600
+setVar,totalDist,0
+setVar,shotLen,diffSwitch(4>4>6)
+setVar,stopLen,diffSwitch(-5>-4>-3)
 
-timeRepeatTimes,100,125,16
-setVar,idx,idx+1
+timeRepeatTimes,100,140,12
 setVar,cnt,cnt+2+irandom(1)
+setVar,totalDist,totalDist+baseDist
 condVarCheck,cnt,>,0
-pattVars,warningDelay;0,spawnDelay;0,showWarning;0,type;2,lineAngle;90,lineLength;70,angle;0,num;2,spdMin;2,spdMax;2.2,rand;random(10000),
-pattAddPos,bp_dark2_line_randomized,bfCenterX,lr+startY+idx*baseDist
-pattAddPos,bp_dark2_line_randomized,bfCenterX,lr+startY-idx*baseDist
-pattVars,angle;180
-pattAddPos,bp_dark2_line_randomized,bfCenterX,-lr+startY+idx*baseDist
-pattAddPos,bp_dark2_line_randomized,bfCenterX,-lr+startY-idx*baseDist
+setVar,totalDist,totalDist+baseDist2
+pattVars,warningDelay;0,spawnDelay;0,showWarning;0,type;2,lineAngle;90,lineLength;140,angle;0,num;4,spdMin;2,spdMax;2.17,rand;random(10000),
+pattAddPos,bp_dark2_line_randomized,bfCenterX,startYMin+totalDist
+pattVars,angle;180,lineAngle;-90
+pattAddPos,bp_dark2_line_randomized,bfCenterX,startYMax-totalDist
 
-condVarCheck,cnt,>=,7
-setVar,cnt,-3
+condVarCheck,cnt,>=,shotLen
+setVar,cnt,stopLen
 
 ####################################################################
 ####################################################################
@@ -243,20 +249,21 @@ pattAdd,mbp_mouse_paladin_32m
 ####################################################################
 newPattern,mbp_mouse_paladin_31m
 time,0
-pattVars,spawnDelay;0,trgBinary;all,element;yellow,width;bfWidth*(1/2),height;bfHeight,
-pattAddPos,bp_fieldlimit_rectangle,bfCenterX,bfCenterY
+setVar,spinShotCnt,diffSwitch(1>2>2)
+setVar,spinShotRing,diffSwitch(2>2>3)
+pattVars,refLimitColor;yellow
+pattAdd,mbp_limit_common
 
-
-pattVars,warningDelay;0,spawnDelay;2000,eraseDelay;999000,scale;1.6,type;1,numPoints;1,posX_0;enemyX,posY_0;enemyY
+pattVars,warningDelay;0,spawnDelay;2000,eraseDelay;5000,scale;1.6,type;1,numPoints;1,posX_0;enemyX,posY_0;enemyY
 pattAdd,bp_dark_targeted
 
-pattVars,warningDelay;0,spawnDelay;2000,eraseDelay;999000,scale;0.5,type;1,numPoints;4,posX_0;enemyX-500,posY_0;enemyY+300,posX_1;enemyX+500,posY_1;enemyY+300,posX_2;enemyX+250,posY_2;enemyY-300,posX_3;enemyX-250,posY_3;enemyY-300
+pattVars,warningDelay;0,spawnDelay;2000,eraseDelay;5000,scale;0.5,type;1,numPoints;4,posX_0;enemyX-500,posY_0;enemyY+300,posX_1;enemyX+500,posY_1;enemyY+300,posX_2;enemyX+250,posY_2;enemyY-300,posX_3;enemyX-250,posY_3;enemyY-300
 pattAdd,bp_dark_targeted
 
 
 setVar,myAngle,random(360)
 setVar,myAngleEx,myAngle
-timeRepeating,2000,150
+timeRepeating,2000,250
 setVar,addRand,15+random(1)
 setVar,myAngle,myAngle+addRand
 setVar,myAngleEx,myAngleEx+addRand+5
@@ -268,7 +275,7 @@ setVar,posX2,enemyX+250
 setVar,posY2,enemyY-300
 setVar,posX3,enemyX-250
 setVar,posY3,enemyY-300
-pattVars,warningDelay;150,spawnDelay;150,showWarning;0,ringNum;3,spd_0;6,spd_1;7,spd_2;8,num;1,angle;myAngleEx,type;1,offset;0
+pattVars,warningDelay;150,spawnDelay;150,showWarning;0,ringNum;spinShotRing,spd_0;6,spd_1;7,spd_2;8,num;spinShotCnt,angle;myAngleEx,type;1,offset;0
 pattAddPos,bp_fire2_blast,posX0,posY0
 pattVars,angle;180-myAngleEx,
 pattAddPos,bp_fire2_blast,posX1,posY1
@@ -281,6 +288,10 @@ condVarCheck,myAngleEx,>=,360
 setVar,myAngleEx,myAngleEx-360
 condVarCheck,myAngle,>=,360
 setVar,myAngle,myAngle-360
+
+condHpThreshold,0.01
+pattAdd,mbp_mouse_paladin_90m
+endPattern
 
 
 ####################################################################
@@ -299,11 +310,164 @@ setVar,dif,360/16
 pattVars,warningDelay;0,spawnDelay;1000,eraseDelay;1500,width;40,numPoints;16,rot_0;ang+dif*0,rot_1;ang+dif*1,rot_2;ang+dif*2,rot_3;ang+dif*3,rot_4;ang+dif*4,rot_5;ang+dif*5,rot_6;ang+dif*6,rot_7;ang+dif*7,rot_8;ang+dif*8,rot_9;ang+dif*9,rot_10;ang+dif*10,rot_11;ang+dif*11,rot_12;ang+dif*12,rot_13;ang+dif*13,rot_14;ang+dif*14,rot_15;ang+dif*15,
 pattAddPos,bp_ray_multi_dir,enemyX,enemyY
 
-##timeRepeating,21000,1500
-##setVar,targetP,randomTargetId(all)
-##setVar,px,playerXPos(targetP)
-##setVar,py,playerYPos(targetP)
-##setVar,ang,pointFrom(enemyX>enemyY>px>py)
-##setVar,dif,360/16
-##pattVars,warningDelay;0,spawnDelay;1000,eraseDelay;1400,width;40,numPoints;16,rot_0;ang+dif*0,rot_1;ang+dif*1,rot_2;ang+dif*2,rot_3;ang+dif*3,rot_4;ang+dif*4,rot_5;ang+dif*5,rot_6;ang+dif*6,rot_7;ang+dif*7,rot_8;ang+dif*8,rot_9;ang+dif*9,rot_10;ang+dif*10,rot_11;ang+dif*11,rot_12;ang+dif*12,rot_13;ang+dif*13,rot_14;ang+dif*14,rot_15;ang+dif*15,
-##pattAddPos,bp_ray_multi_dir,enemyX,enemyY
+condHpThreshold,0.01
+endPattern
+
+####################################################################
+####################################################################
+newPattern,mbp_mouse_paladin_90m
+
+time,4000
+pattAdd,mbp_last_spell
+
+timeRepeatTimes,5000,10000,6
+pattAdd,mbp_mouse_paladin_91m
+
+time,68000
+move,bfCenterX,bfCenterY,500
+
+time,70000
+erasePatterns
+
+####################################################################
+####################################################################
+newPattern,mbp_mouse_paladin_91m
+time,0
+setVar,baseDelay,9500
+setVar,idx,-6
+setVar,shotX,bfCenterX-(bfWidth*(3/5)/2)+100
+setVar,cfSpin,5
+setVar,cfDist,5
+setVar,shotHeight,500
+setVar,angleBase,random(360)
+setVar,angleDiff,18
+
+pattVars,warningDelay;3000,spawnDelay;7000,radius;160,trgBinary;all,warnMsg;1,
+pattAdd,bp_circle_spreads
+
+timeRepeatTimes,0,500,10
+setVar,baseDelay,baseDelay-500
+setVar,idx,idx+6
+setVar,idxC,idx
+setVar,angleBase,angleBase+angleDiff
+pattVars,refDelay;baseDelay,refDir;angleBase,refIdx;idxC
+pattAdd,mbp_hijiri
+setVar,idxC,idxC+1
+setVar,angleBase,angleBase+angleDiff
+pattVars,refDelay;baseDelay,refDir;angleBase,refIdx;idxC
+pattAdd,mbp_hijiri
+setVar,idxC,idxC+1
+setVar,angleBase,angleBase+angleDiff
+pattVars,refDelay;baseDelay,refDir;angleBase,refIdx;idxC
+pattAdd,mbp_hijiri
+setVar,idxC,idxC+1
+setVar,angleBase,angleBase+angleDiff
+pattVars,refDelay;baseDelay,refDir;angleBase,refIdx;idxC
+pattAdd,mbp_hijiri
+setVar,idxC,idxC+1
+setVar,angleBase,angleBase+angleDiff
+pattVars,refDelay;baseDelay,refDir;angleBase,refIdx;idxC
+pattAdd,mbp_hijiri
+setVar,idxC,idxC+1
+setVar,angleBase,angleBase+angleDiff
+pattVars,refDelay;baseDelay,refDir;angleBase,refIdx;idxC
+pattAdd,mbp_hijiri
+
+time,5050
+setVar,baseDelay,9500
+setVar,idx,-6
+setVar,angleBase,random(360)
+pattVars,warningDelay;3000,spawnDelay;7000,radius;160,trgBinary;all,warnMsg;1,
+pattAdd,bp_circle_spreads
+
+timeRepeatTimes,5100,500,10
+setVar,baseDelay,baseDelay-500
+setVar,idx,idx+6
+setVar,idxC,idx
+setVar,angleBase,angleBase+angleDiff
+pattVars,refDelay;baseDelay,refDir;angleBase,refIdx;idxC
+pattAdd,mbp_hijiri_h
+setVar,idxC,idxC+1
+setVar,angleBase,angleBase+angleDiff
+pattVars,refDelay;baseDelay,refDir;angleBase,refIdx;idxC
+pattAdd,mbp_hijiri_h
+setVar,idxC,idxC+1
+setVar,angleBase,angleBase+angleDiff
+pattVars,refDelay;baseDelay,refDir;angleBase,refIdx;idxC
+pattAdd,mbp_hijiri_h
+setVar,idxC,idxC+1
+setVar,angleBase,angleBase+angleDiff
+pattVars,refDelay;baseDelay,refDir;angleBase,refIdx;idxC
+pattAdd,mbp_hijiri_h
+setVar,idxC,idxC+1
+setVar,angleBase,angleBase+angleDiff
+pattVars,refDelay;baseDelay,refDir;angleBase,refIdx;idxC
+pattAdd,mbp_hijiri_h
+setVar,idxC,idxC+1
+setVar,angleBase,angleBase+angleDiff
+pattVars,refDelay;baseDelay,refDir;angleBase,refIdx;idxC
+pattAdd,mbp_hijiri_h
+
+####################################################################
+####################################################################
+newPattern,mbp_hijiri
+time,0
+setVar,dirBase,refDir
+setVar,idxC,refIdx
+setVar,baseDelay,refDelay
+setVar,cloneIdxD,60
+
+
+setVar,warningBase,4000
+setVar,shotX,bfCenterX-(bfWidth*(3/5)/2)+100
+setVar,cfSpin,5
+setVar,cfDist,4.16
+setVar,shotHeight,400
+setVar,angleBase,random(360)
+setVar,angleDiff,18
+
+
+setVar,shotYrel1,shotHeight*cos(idxC*cfSpin)
+setVar,shotXrel1,idxC*cfDist
+setVar,shotYrel2,shotHeight*cos((idxC+cloneIdxD)*cfSpin)
+setVar,shotXrel2,(idxC+cloneIdxD)*cfDist
+setVar,shotYrel3,shotHeight*cos((idxC+cloneIdxD*2)*cfSpin)
+setVar,shotXrel3,(idxC+cloneIdxD*2)*cfDist
+setVar,shotYrel4,shotHeight*cos((idxC+cloneIdxD*3)*cfSpin)
+setVar,shotXrel4,(idxC+cloneIdxD*3)*cfDist
+setVar,shotYrel5,shotHeight*cos((idxC+cloneIdxD*4)*cfSpin)
+setVar,shotXrel5,(idxC+cloneIdxD*4)*cfDist
+pattVars,warningDelay;baseDelay-warningBase,spawnDelay;baseDelay,scale;0.12,spd;2.4,dir;dirBase,numPoints;5,posX_0;shotX+shotXrel1,posY_0;enemyY+shotYrel1,posX_1;shotX+shotXrel2,posY_1;enemyY+shotYrel2,posX_2;shotX+shotXrel3,posY_2;enemyY+shotYrel3,posX_3;shotX+shotXrel4,posY_3;enemyY+shotYrel4,posX_4;shotX+shotXrel5,posY_4;enemyY+shotYrel5
+pattAdd,bp_dark_moon_summon_mult
+
+####################################################################
+####################################################################
+newPattern,mbp_hijiri_h
+time,0
+setVar,dirBase,refDir
+setVar,idxC,refIdx
+setVar,baseDelay,refDelay
+setVar,cloneIdxD,60
+
+
+setVar,warningBase,4000
+setVar,shotY,bfMinY+100
+setVar,cfSpin,5
+setVar,cfDist,2.4
+setVar,shotHeight,650
+setVar,angleBase,random(360)
+setVar,angleDiff,18
+
+
+setVar,shotXrel1,shotHeight*cos(idxC*cfSpin)
+setVar,shotYrel1,idxC*cfDist
+setVar,shotXrel2,shotHeight*cos((idxC+cloneIdxD)*cfSpin)
+setVar,shotYrel2,(idxC+cloneIdxD)*cfDist
+setVar,shotXrel3,shotHeight*cos((idxC+cloneIdxD*2)*cfSpin)
+setVar,shotYrel3,(idxC+cloneIdxD*2)*cfDist
+setVar,shotXrel4,shotHeight*cos((idxC+cloneIdxD*3)*cfSpin)
+setVar,shotYrel4,(idxC+cloneIdxD*3)*cfDist
+setVar,shotXrel5,shotHeight*cos((idxC+cloneIdxD*4)*cfSpin)
+setVar,shotYrel5,(idxC+cloneIdxD*4)*cfDist
+pattVars,warningDelay;baseDelay-warningBase,spawnDelay;baseDelay,scale;0.12,spd;2.4,dir;dirBase,numPoints;5,posX_0;enemyX+shotXrel1,posY_0;shotY+shotYrel1,posX_1;enemyX+shotXrel2,posY_1;shotY+shotYrel2,posX_2;enemyX+shotXrel3,posY_2;shotY+shotYrel3,posX_3;enemyX+shotXrel4,posY_3;shotY+shotYrel4,posX_4;enemyX+shotXrel5,posY_4;shotY+shotYrel5
+pattAdd,bp_dark_moon_summon_mult

@@ -1,14 +1,13 @@
 newPattern,mbp_dragon_mythril
 time,0
 zoom,0.8
-setExpMult,6,1.5
+pattAdd,mbp_boss_common
+
 pattVars,delay;0,hbsIndex;hbs(hbs_flutterstep),hbsDuration;999000,hbsStrength;0
 pattAdd,bp_apply_hbs_synced
 
 time,1000
 transform,anim_dragon_mythril_big,800,0.8,4,2
-setFlags,2
-
 
 time,10000
 pattAdd,mbp_dragon_mythril_m00

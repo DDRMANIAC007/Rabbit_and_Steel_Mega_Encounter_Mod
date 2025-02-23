@@ -1,10 +1,12 @@
-newPattern,mbp_mouse_oakspear
+newPattern,mbp_wolf_blackear
 time,0
 zoom,0.80
 pattAdd,mbp_zako_common
-
 pattVars,delay;0,hbsIndex;hbs(hbs_flutterstep),hbsDuration;999000,hbsStrength;0
 pattAdd,bp_apply_hbs_synced
 
-timeRepeating,1500,14000
-pattAdd,mbp_mouse_oakspear_0m
+time,1500
+move,bfCenterX+700,bfCenterY,300
+
+timeRepeating,2500,6000
+pattAdd,mbp_wolf_blackear_0m

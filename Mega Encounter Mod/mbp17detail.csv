@@ -2,39 +2,27 @@
 ####################################################################
 newPattern,mbp_mouse_axewielder_0m
 time,0
-setVar,baseLineWidth,bfWidth+300
+setVar,shotCnt,diffSwitch(10>18>26)
+setVar,baseLineWidth,bfWidth+500
 pattVarReset
 
 timeRepeating,1000,2000
 setVar,baseRand,random(50)
-pattVars,warningDelay;0,spawnDelay;0,showWarning;false,angle;-80,lineAngle;0,lineLength;baseLineWidth,num;25,spd;2.8,type;0,
-pattAddPos,bp_dark2_line,bfMinX-200-baseRand,bfMaxY+50
-##pattVars,angle;-170,lineAngle;90
-##pattAddPos,bp_dark2_line,bfMaxX+50,bfMinY-baseRand
-
-##pattVars,angle;-100,lineAngle;0
-##pattAddPos,bp_dark2_line,bfMinX-baseRand,bfMaxY+50
-##pattVars,angle;-190,lineAngle;90
-##pattAddPos,bp_dark2_line,bfMaxX+50,bfMinY-200-baseRand
+pattVars,warningDelay;0,spawnDelay;0,showWarning;false,angle;-75,lineAngle;0,lineLength;baseLineWidth,num;shotCnt,spd;2.8,type;0,
+pattAddPos,bp_dark2_line,bfMinX-400-baseRand,bfMaxY+50
 
 ####################################################################
 ####################################################################
 newPattern,mbp_mouse_archer_0m
 time,0
+setVar,shotCnt,diffSwitch(10>18>26)
 setVar,baseLineWidth,bfWidth+300
 pattVarReset
 
 timeRepeating,1000,2000
 setVar,baseRand,random(50)
-pattVars,warningDelay;0,spawnDelay;0,showWarning;false,angle;-80,lineAngle;0,lineLength;baseLineWidth,num;25,spd;2.8,type;0,
-##pattAddPos,bp_dark2_line,bfMinX-200-baseRand,bfMaxY+50
-##pattVars,angle;-170,lineAngle;90
-##pattAddPos,bp_dark2_line,bfMaxX+50,bfMinY-baseRand
-
-##pattVars,angle;-100,lineAngle;0
-##pattAddPos,bp_dark2_line,bfMinX-baseRand,bfMaxY+50
-pattVars,angle;-190,lineAngle;90
-pattAddPos,bp_dark2_line,bfMaxX+50,bfMinY-200-baseRand
+pattVars,warningDelay;0,spawnDelay;0,showWarning;false,angle;-190,lineAngle;90,lineLength;baseLineWidth,num;shotCnt,spd;2.8,type;0,
+pattAddPos,bp_dark2_line,bfMaxX+50,bfMinY-400-baseRand
 
 ####################################################################
 ####################################################################

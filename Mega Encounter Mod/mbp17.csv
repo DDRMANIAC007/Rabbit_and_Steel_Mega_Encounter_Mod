@@ -1,7 +1,8 @@
 newPattern,mbp_mouse_axewielder
 time,0
 zoom,0.80
-setExpMult,1,1
+pattAdd,mbp_zako_common
+
 pattVars,delay;0,hbsIndex;hbs(hbs_flutterstep),hbsDuration;999000,hbsStrength;0
 pattAdd,bp_apply_hbs_synced
 
@@ -17,7 +18,7 @@ pattAdd,mbp_mouse_axewielder_1m
 
 newPattern,mbp_mouse_archer
 time,0
-setExpMult,1,1
+pattAdd,mbp_zako_common
 
 time,1500
 pattAdd,mbp_mouse_archer_0m

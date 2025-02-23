@@ -1,7 +1,8 @@
 newPattern,mbp_mouse_rosemage
 time,0
 zoom,0.85
-setExpMult,3,1.2
+pattAdd,mbp_chu_common
+
 pattVars,delay;0,hbsIndex;hbs(hbs_flutterstep),hbsDuration;999000,hbsStrength;0
 pattAdd,bp_apply_hbs_synced
 
@@ -9,16 +10,26 @@ time,1100
 move,bfCenterX,bfCenterY,600
 facePoint,bfMinX
 
+time,1800
+condDifficultyCheck,true,true,false
+pattAdd,mbp_mouse_rosemage_0m_n
+
 time,2000
+condDifficultyCheck,false,false,true
 pattAdd,mbp_mouse_rosemage_0m
 
 newPattern,mbp_mouse_commander
 time,0
-setExpMult,3,1.2
+pattAdd,mbp_chu_common
 
 time,1100
 move,bfCenterX,bfCenterY,600
 facePoint,bfMaxX
 
+time,1800
+condDifficultyCheck,true,true,false
+pattAdd,mbp_mouse_commander_0m_n
+
 time,2000
+condDifficultyCheck,false,false,true
 pattAdd,mbp_mouse_commander_0m

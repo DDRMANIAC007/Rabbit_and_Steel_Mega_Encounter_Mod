@@ -1,8 +1,8 @@
 newPattern,mbp_queens_harp
 time,0
-setFlags,8
 zoom,0.80
-setExpMult,1,1
+pattAdd,mbp_zako_common
+
 pattVars,delay;0,hbsIndex;hbs(hbs_flutterstep),hbsDuration;999000,hbsStrength;0
 pattAdd,bp_apply_hbs_synced
 time,1500

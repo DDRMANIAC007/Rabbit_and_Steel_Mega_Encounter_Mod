@@ -4,10 +4,11 @@ newPattern,mbp_dragon_silver_0m
 time,0
 
 setVar,sign,randomSign
+setVar,eNum,diffSwitch(3>4>5)
 
 timeRepeating,0,6000
 anim,0,2000,4000
-pattVars,warningDelay;0,spawnDelay;2000,timeBetween;500,angle;0,width;400,widthInc;200,num;5
+pattVars,warningDelay;0,spawnDelay;2000,timeBetween;500,angle;0,width;400,widthInc;200,num;eNum
 pattAddPos,bp_ray_enlarge_single,bfMinX-300,bfCenterY+(sign*500)
 setVar,sign,sign*(-1)
 
@@ -19,10 +20,11 @@ time,0
 anim,0,1000,9999000
 
 pattVarReset
-orderBinRandom,1,1,1,1
+orderBinRandom,1,3
 setVar,targetP,randomTargetId(orderBin0)
 setVar,ringScale,300
 setVar,ringBase,60
+setVar,eDelay,diffSwitch(1500>2000>2500)
 
 
 
@@ -34,7 +36,7 @@ setVar,ringIdx,0
 setVar,shotPos1X,bfMaxX+30
 setVar,shotPos1Y,bfMinY+ringIdx*(bfHeight/6)
 setVar,shotAngle1,pointFrom(shotPos1X>shotPos1Y>px>py)
-pattVars,warningDelay;0,spawnDelay;1000,eraseDelay;2500,width;60,angle;shotAngle1
+pattVars,warningDelay;0,spawnDelay;1000,eraseDelay;eDelay,width;60,angle;shotAngle1
 pattAddPos,bp_ray_single,shotPos1X,shotPos1Y
 setVar,ringIdx,ringIdx+1
 setVar,shotPos1Y,bfMinY+ringIdx*(bfHeight/6)
@@ -61,3 +63,9 @@ setVar,shotPos1Y,bfMinY+ringIdx*(bfHeight/6)
 setVar,shotAngle1,pointFrom(shotPos1X>shotPos1Y>px>py)
 pattVars,angle;shotAngle1
 pattAddPos,bp_ray_single,shotPos1X,shotPos1Y
+
+timeRepeating,2000,6000
+condDifficultyCheck,false,false,true
+orderBinSet,1,randomTargetBinary(1)
+pattVars,warningDelay;0,spawnDelay;4000,width;200,trgBinary;orderBin1,warnMsg;1,
+pattAdd,bp_line_spreads_v
