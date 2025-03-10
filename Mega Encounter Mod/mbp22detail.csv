@@ -2,7 +2,8 @@
 ####################################################################
 newPattern,mbp_bird_whispering_0m
 time,0
-setVar,shotCnt,diffSwitch(0>1>2)
+setVar,shotCnt,diffSwitch(1>2>2)
+setVar,shotType,diffSwitch(0>0>1)
 anim,0,3000,999000
 
 pattVarReset
@@ -10,24 +11,23 @@ pattVars,warningDelay;0,spawnDelay;3000,radius;400,number;50,spd;20,element;red,
 pattAdd,bp_prscircle_follow_enemy
 
 timeRepeating,3000,1000
-pattVars,warningDelay;0,spawnDelay;0,showWarning;0,type;1,lineAngle;-45,lineLength;700,angle;45,num;shotCnt+irandom(2),spdMin;6,spdMax;10,rand;random(10000),
+pattVars,warningDelay;0,spawnDelay;0,showWarning;0,type;shotType,lineAngle;-45,lineLength;700,angle;45,num;shotCnt+irandom(1),spdMin;6,spdMax;10,rand;random(10000),
 pattAddPos,bp_dark2_line_randomized,bfMinX,bfMinY-100
-pattVars,num;shotCnt+irandom(2),spdMin;6,spdMax;10,rand;random(10000),
+pattVars,num;shotCnt+irandom(1),spdMin;6,spdMax;10,rand;random(10000),
 pattAddPos,bp_dark2_line_randomized,bfMinX+800,bfMinY-100
-pattVars,num;shotCnt+irandom(2),spdMin;6,spdMax;10,rand;random(10000),
+pattVars,num;shotCnt+irandom(1),spdMin;6,spdMax;10,rand;random(10000),
 pattAddPos,bp_dark2_line_randomized,bfMinX+1600,bfMinY-100
-pattVars,num;shotCnt+irandom(2),spdMin;6,spdMax;10,rand;random(10000),
+pattVars,num;shotCnt+irandom(1),spdMin;6,spdMax;10,rand;random(10000),
 pattAddPos,bp_dark2_line_randomized,bfMinX-550,bfMinY+450
-pattVars,num;shotCnt+irandom(2),spdMin;6,spdMax;10,rand;random(10000),
+pattVars,num;shotCnt+irandom(1),spdMin;6,spdMax;10,rand;random(10000),
 pattAddPos,bp_dark2_line_randomized,bfMinX-550,bfMinY+1250
 
 ####################################################################
 ####################################################################
 newPattern,mbp_bird_whispering_0m_single
 time,0
-setVar,shotCnt,diffSwitch(3>6>8)
+setVar,shotCnt,diffSwitch(3>5>7)
 anim,0,3000,999000
-pattVarReset
 pattVars,warningDelay;0,spawnDelay;3000,radius;400,number;50,spd;20,element;red,doubled;false,warnMsg;2,
 pattAdd,bp_prscircle_follow_enemy
 
